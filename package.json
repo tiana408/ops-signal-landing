@@ -6,7 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker:dev": "docker compose --profile dev up --build",
+    "docker:prod": "docker compose --profile prod up --build",
+    "docker:full": "docker compose --profile full up --build",
+    "docker:down": "docker compose down",
+    "docker:clean": "docker compose down -v --rmi local",
+    "docker:logs": "docker compose logs -f",
+    "db:start": "docker compose --profile db up -d",
+    "db:stop": "docker compose --profile db down",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "next.js",

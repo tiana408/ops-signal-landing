@@ -1,0 +1,46 @@
+# Development Container Dockerfile
+# Optimized for local development with hot reload
+# Supports VS Code Dev Containers, Cursor, and standalone Docker development
+
+FROM node:20-alpine
+
+# Install essential development tools
+RUN apk add --no-cache \
+    git \
+    curl \
+    bash \
+    openssh-client \
+    python3 \
+    make \
+    g++
+
+# Install global npm packages for development
+RUN npm install -g \
+    typescript \
+    ts-node \
+    eslint \
+    prettier
+
+# Set working directory
+WORKDIR /workspace
+
+# Create non-root user for development (matches devcontainer.json)
+RUN addgroup -g 1000 node || true && \
+    adduser -u 1000 -G node -s /bin/bash -D node || true
+
+# Set ownership
+RUN chown -R node:node /workspace
+
+# Switch to non-root user
+USER node
+
+# Environment variables for development
+ENV NODE_ENV=development
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PATH="/workspace/node_modules/.bin:$PATH"
+
+# Expose development ports
+EXPOSE 3000
+
+# Default command (can be overridden)
+CMD ["npm", "run", "dev"]
