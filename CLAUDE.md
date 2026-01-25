@@ -2,20 +2,66 @@
 
 **Project**: Agentic Landing Page Template
 **Purpose**: AI-assisted development of personal branding landing pages
+**Approach**: Container-first development
 **Level**: Project Implementation
 
 ---
 
 ## Project Overview
 
-This is a **Next.js 16 landing page template** for personal branding. Students clone this repository and customize it for their:
+This is a **Next.js 16 landing page template** using **Docker containers** for development and deployment. Students clone this repository and customize it for their:
 - Consulting/freelance services
 - Professional portfolio
 - Digital resume/CV
 - Personal brand website
+- Enterprise initiative communication
 
 ### Primary Goal
-Help users customize content and deploy to AWS using natural language commands.
+Help users customize content and deploy to AWS using natural language commands, with containers running in detached mode for non-blocking AI assistance.
+
+---
+
+## Container-First Workflow
+
+### Development Pipeline
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│  Develop    │ ──▶ │ Containerize│ ──▶ │   Deploy    │
+│ docker:dev  │     │ docker:prod │     │ AWS App     │
+│             │     │             │     │ Runner      │
+└─────────────┘     └─────────────┘     └─────────────┘
+```
+
+### Primary Commands (Detached Mode)
+
+**IMPORTANT**: All container commands run in **detached mode** (`-d`) so the terminal returns immediately. This allows you to continue working while containers run in the background.
+
+```bash
+# Start development (returns immediately)
+npm run docker:dev
+
+# Check if containers are running
+npm run docker:status
+
+# View logs (streaming)
+npm run docker:logs
+
+# Stop all containers
+npm run docker:down
+```
+
+### Full Command Reference
+
+| Command | Purpose | Blocking? |
+|---------|---------|-----------|
+| `npm run docker:dev` | Start dev server with hot-reload | No (detached) |
+| `npm run docker:prod` | Test production build | No (detached) |
+| `npm run docker:full` | Full stack (app + DB + Redis) | No (detached) |
+| `npm run docker:status` | Check running containers | No |
+| `npm run docker:logs` | View logs (Ctrl+C to exit) | Yes (streaming) |
+| `npm run docker:shell` | Shell into dev container | Yes (interactive) |
+| `npm run docker:down` | Stop all containers | No |
+| `npm run docker:clean` | Remove containers + volumes | No |
 
 ---
 
@@ -41,18 +87,57 @@ agentic-landing-template/
 │   ├── page.tsx            # ← PRIMARY EDIT TARGET
 │   ├── layout.tsx          # Metadata, fonts
 │   └── globals.css         # Tailwind imports, global styles
+├── templates/              # Alternative page templates
+│   ├── services.tsx        # Consulting services template
+│   ├── portfolio.tsx       # Designer/developer portfolio
+│   ├── resume.tsx          # Digital resume/CV
+│   └── enterprise.tsx      # Enterprise initiative
 ├── public/
 │   └── images/             # Static assets
 ├── docs/                   # Documentation
-├── templates/              # Alternative page templates
-├── GEMINI.md              # Gemini CLI config
-├── CLAUDE.md              # This file
-├── Dockerfile             # Multi-stage build
-├── docker-compose.yml     # Local Docker
-├── next.config.ts         # Next.js config
-├── postcss.config.mjs     # PostCSS/Tailwind
-├── tsconfig.json          # TypeScript config
-└── package.json           # Dependencies
+├── scripts/
+│   └── init-db.sql         # PostgreSQL initialization
+├── GEMINI.md               # Gemini CLI system prompt
+├── CLAUDE.md               # This file
+├── Dockerfile              # Production multi-stage build
+├── Dockerfile.dev          # Development container
+├── docker-compose.yml      # Container orchestration
+└── package.json            # Dependencies + npm scripts
+```
+
+---
+
+## Starting Development
+
+### First Time Setup
+```bash
+# 1. Clone repository
+git clone https://github.com/YOUR-USERNAME/agentic-landing-template.git
+cd agentic-landing-template
+
+# 2. Start development container (runs in background)
+npm run docker:dev
+
+# 3. Verify container is running
+npm run docker:status
+
+# 4. Open in browser
+open http://localhost:3000
+```
+
+### Typical Workflow
+```bash
+# Start containers (if not running)
+npm run docker:dev
+
+# Edit files with your AI assistant
+# Changes appear automatically (hot-reload)
+
+# Check logs if something seems wrong
+npm run docker:logs
+
+# Stop when done
+npm run docker:down
 ```
 
 ---
@@ -102,8 +187,6 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@apply bg-background; /* Won't work without config */
 ```
 
 ### Component Styling
@@ -127,7 +210,7 @@ The landing page follows this structure:
 ### 1. Navigation (`<nav>`)
 - Fixed position with backdrop blur
 - Logo + site name on left
-- Nav links on right (Services, About, Contact)
+- Nav links on right
 - Mobile hamburger menu
 
 ### 2. Hero Section
@@ -135,10 +218,9 @@ The landing page follows this structure:
 - Subtitle with profession/title
 - Value proposition tagline
 - Two CTA buttons (primary + secondary)
-- Optional badge (event, promotion)
 
 ### 3. Authority Section
-- Experience metrics (years, clients, etc.)
+- Experience metrics
 - Key credentials/certifications
 - Trust signals
 - Brief professional bio
@@ -148,29 +230,24 @@ The landing page follows this structure:
 - Feature lists per tier
 - Price points
 - CTA buttons
-- "Most Popular" badge on middle tier
 
 ### 5. Case Studies Section
-- 2-3 project examples
+- Project examples
 - Problem → Solution → Result format
 - Metrics where possible
-- Client type (anonymized if needed)
 
 ### 6. FAQ Section
-- 4-6 common questions
-- Expandable or static answers
+- Common questions and answers
 - Address objections/concerns
 
 ### 7. Contact Section
 - Email address
 - Calendly booking link
 - Social media links
-- Location (optional)
 
 ### 8. Footer
 - Copyright notice
 - Additional links
-- Social icons
 
 ---
 
@@ -179,7 +256,7 @@ The landing page follows this structure:
 ### Updating Text Content
 ```typescript
 // Find the section in app/page.tsx
-// Update the text directly
+// Update the text directly - container auto-reloads
 
 // Before:
 <h1>Ping Wu</h1>
@@ -199,55 +276,67 @@ className="bg-blue-600 hover:bg-blue-700"
 className="bg-green-600 hover:bg-green-700"
 ```
 
-### Adding a New Section
-```typescript
-// Add section with id for navigation
-<section id="new-section" className="py-20 bg-slate-50 dark:bg-slate-900">
-  <div className="container mx-auto px-4 md:px-6">
-    <h2 className="text-3xl font-bold font-display text-center mb-12">
-      Section Title
-    </h2>
-    {/* Section content */}
-  </div>
-</section>
-
-// Add navigation link
-<a href="#new-section">New Section</a>
+### Switching Templates
+```bash
+# Use a different template as your starting point
+cp templates/services.tsx app/page.tsx    # For consultants
+cp templates/portfolio.tsx app/page.tsx   # For designers
+cp templates/resume.tsx app/page.tsx      # For job seekers
+cp templates/enterprise.tsx app/page.tsx  # For initiatives
 ```
 
 ---
 
-## Docker Commands
+## Docker Commands (Direct)
 
-### Local Development
+### Development
 ```bash
-# Build image
-docker build -t landing-page:v1 .
+# Start (detached - returns immediately)
+docker compose --profile dev up -d --build
 
-# Run container
-docker run -p 3000:3000 landing-page:v1
+# Check status
+docker compose ps
 
-# Using Docker Compose
-docker-compose up --build      # Build and start
-docker-compose up -d           # Background mode
-docker-compose down            # Stop
-docker-compose logs -f         # View logs
-docker-compose ps              # Check status
-```
-
-### Troubleshooting Docker
-```bash
-# Rebuild without cache
-docker build --no-cache -t landing-page:v1 .
-
-# Check running containers
-docker ps -a
-
-# View container logs
-docker logs <container-id>
+# View logs (Ctrl+C to exit)
+docker compose logs -f dev
 
 # Shell into container
-docker exec -it <container-id> /bin/sh
+docker compose --profile dev exec dev sh
+
+# Stop
+docker compose down
+```
+
+### Production Preview
+```bash
+# Build and run production container
+docker compose --profile prod up -d --build
+
+# Access at http://localhost:3001
+
+# Check status
+docker compose ps
+```
+
+### Full Stack (with Database)
+```bash
+# Start app + PostgreSQL + Redis
+docker compose --profile full up -d --build
+
+# Database UI at http://localhost:8080
+# Credentials: dev / devpassword
+```
+
+### Troubleshooting
+```bash
+# Rebuild without cache
+docker compose --profile dev build --no-cache
+
+# View all containers (including stopped)
+docker ps -a
+
+# Clean up everything
+docker compose down -v --rmi local
 ```
 
 ---
@@ -271,8 +360,11 @@ aws ecr get-login-password --region us-west-2 | \
   docker login --username AWS --password-stdin \
   <ACCOUNT_ID>.dkr.ecr.us-west-2.amazonaws.com
 
+# Build production image
+docker build -t landing-page:latest .
+
 # Tag image
-docker tag landing-page:v1 \
+docker tag landing-page:latest \
   <ACCOUNT_ID>.dkr.ecr.us-west-2.amazonaws.com/my-landing:latest
 
 # Push image
@@ -282,7 +374,7 @@ docker push \
 
 ### App Runner Deployment
 ```bash
-# Create service (replace values)
+# Create service
 aws apprunner create-service \
   --service-name my-landing-page \
   --source-configuration '{
@@ -292,20 +384,10 @@ aws apprunner create-service \
     "ImageRepository": {
       "ImageIdentifier": "<ACCOUNT_ID>.dkr.ecr.us-west-2.amazonaws.com/my-landing:latest",
       "ImageRepositoryType": "ECR",
-      "ImageConfiguration": {
-        "Port": "3000"
-      }
+      "ImageConfiguration": { "Port": "3000" }
     }
   }' \
-  --instance-configuration '{
-    "Cpu": "1024",
-    "Memory": "2048"
-  }' \
-  --region us-west-2
-
-# Check service status
-aws apprunner describe-service \
-  --service-arn <SERVICE_ARN> \
+  --instance-configuration '{ "Cpu": "1024", "Memory": "2048" }' \
   --region us-west-2
 
 # Get service URL
@@ -316,104 +398,69 @@ aws apprunner describe-service \
   --region us-west-2
 ```
 
-### Cleanup Commands
-```bash
-# Delete App Runner service
-aws apprunner delete-service \
-  --service-arn <SERVICE_ARN> \
-  --region us-west-2
-
-# Delete ECR repository
-aws ecr delete-repository \
-  --repository-name my-landing \
-  --force \
-  --region us-west-2
-```
-
 ---
 
 ## Response Behavior
 
+### When Starting Development
+1. Run `npm run docker:dev` (detached)
+2. Suggest checking status: `npm run docker:status`
+3. Direct to browser: `http://localhost:3000`
+4. Never leave user waiting for blocking command
+
 ### When Editing Content
 1. Read `app/page.tsx` first to understand current state
 2. Make precise, targeted edits
-3. Preserve all existing styling
+3. Remind user that changes auto-reload
 4. Maintain TypeScript compliance
-5. Test changes mentally for edge cases
 
 ### When Troubleshooting
-1. Identify the error type (build, runtime, style)
-2. Check common causes first
-3. Provide clear fix with explanation
-4. Suggest prevention for future
+1. First: Check container status (`npm run docker:status`)
+2. Then: Check logs (`npm run docker:logs`)
+3. Identify error type (build, runtime, style)
+4. Provide clear fix with explanation
 
-### When Explaining
-1. Be concise and practical
-2. Use code examples
-3. Link concepts to the project
-4. Avoid unnecessary theory
+### When Working with Containers
+1. **Always use detached mode** for starting containers
+2. Use npm scripts (they're pre-configured correctly)
+3. Point to `docker:logs` for debugging
+4. Keep terminal available for next command
 
 ---
 
 ## Constraints
 
 ### DO NOT
+- Run blocking container commands (missing `-d` flag)
 - Modify core dependencies without explicit request
 - Break existing functionality when editing
 - Remove accessibility attributes
 - Use deprecated patterns
 - Over-engineer simple solutions
-- Add features not requested
 
 ### ALWAYS
+- Use detached mode for container startup
+- Return terminal control to user immediately
 - Preserve mobile responsiveness
 - Maintain dark mode support
 - Keep TypeScript types valid
 - Follow existing code patterns
-- Test edge cases mentally
-- Consider performance implications
 
 ---
 
 ## Quick Reference
 
-| Action | Command/File |
-|--------|--------------|
+| Task | Command |
+|------|---------|
+| Start dev environment | `npm run docker:dev` |
+| Check container status | `npm run docker:status` |
+| View logs | `npm run docker:logs` |
+| Stop containers | `npm run docker:down` |
+| Test production build | `npm run docker:prod` |
+| Full stack | `npm run docker:full` |
 | Edit landing page | `app/page.tsx` |
 | Edit metadata/SEO | `app/layout.tsx` |
 | Edit global styles | `app/globals.css` |
-| Start dev server | `npm run dev` |
-| Build production | `npm run build` |
-| Build Docker | `docker build -t name:tag .` |
-| Run Docker | `docker run -p 3000:3000 name:tag` |
-| Start with Compose | `docker-compose up --build` |
-
----
-
-## Git Workflow
-
-```bash
-# Feature branch workflow
-git checkout -b feature/update-hero
-# ... make changes ...
-git add app/page.tsx
-git commit -m "feat: Update hero with new branding"
-git push -u origin feature/update-hero
-# Create PR on GitHub
-```
-
-### Commit Message Format
-```
-type: short description
-
-Types:
-- feat: New feature
-- fix: Bug fix
-- style: Styling changes
-- docs: Documentation
-- refactor: Code restructuring
-- chore: Maintenance tasks
-```
 
 ---
 
@@ -421,14 +468,14 @@ Types:
 
 | Error | Cause | Fix |
 |-------|-------|-----|
+| Container not starting | Port in use | `npm run docker:down` then retry |
 | `Cannot apply unknown utility class` | Tailwind v3 syntax in v4 | Use `@import "tailwindcss"` |
-| `Module not found` | Missing dependency | Run `npm install` |
-| `Type error` | TypeScript mismatch | Check types, add proper interfaces |
-| `Container exits immediately` | Build or runtime error | Check `docker logs` |
-| `ECR push denied` | Auth expired | Re-run `aws ecr get-login-password` |
+| `Module not found` | Dependencies missing | Rebuild: `npm run docker:clean && npm run docker:dev` |
+| Hot reload not working | Volume mount issue | Restart: `npm run docker:down && npm run docker:dev` |
+| `ECR push denied` | Auth expired | Re-run ECR login command |
 
 ---
 
 **Last Updated**: 2026-01-25
-**Version**: 1.0
+**Version**: 2.0 (Container-First)
 **For**: Claude Code CLI

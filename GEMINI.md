@@ -2,19 +2,19 @@
 
 **Project**: Agentic Landing Page Template
 **Purpose**: AI-assisted development of personal branding landing pages
+**Approach**: Container-first development
 
 ---
 
 ## Project Context
 
-You are assisting with a **Next.js 16 landing page** project. This is a template that students customize for their personal brand (services, portfolio, or resume).
+You are assisting with a **Next.js 16 landing page** project that uses **Docker containers** for development and deployment. This is a template that students customize for their personal brand (services, portfolio, or resume).
 
 ### Tech Stack
 - **Framework**: Next.js 16.x with App Router
 - **Language**: TypeScript 5.x
 - **Styling**: Tailwind CSS 4.x (using `@import "tailwindcss"`)
-- **Package Manager**: npm
-- **Containerization**: Docker with multi-stage builds
+- **Container**: Docker (development + production)
 - **Deployment**: AWS App Runner via ECR
 
 ### Key Files
@@ -22,7 +22,52 @@ You are assisting with a **Next.js 16 landing page** project. This is a template
 - `app/layout.tsx` - Root layout with metadata
 - `app/globals.css` - Global styles and Tailwind imports
 - `Dockerfile` - Multi-stage production build
-- `docker-compose.yml` - Local development with Docker
+- `Dockerfile.dev` - Development container
+- `docker-compose.yml` - Container orchestration
+
+---
+
+## Container-First Workflow
+
+### Development Pipeline
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│  Develop    │ ──▶ │ Containerize│ ──▶ │   Deploy    │
+│ docker:dev  │     │ docker:prod │     │ AWS App     │
+│             │     │             │     │ Runner      │
+└─────────────┘     └─────────────┘     └─────────────┘
+```
+
+### Primary Commands (Detached Mode)
+
+All commands run containers in **detached mode** (-d) so you can continue working:
+
+```bash
+# Start development (runs in background)
+npm run docker:dev
+
+# Check container status
+npm run docker:status
+
+# View logs
+npm run docker:logs
+
+# Stop containers
+npm run docker:down
+```
+
+### Full Command Reference
+
+| Command | Purpose |
+|---------|---------|
+| `npm run docker:dev` | Start dev server (detached, hot-reload) |
+| `npm run docker:prod` | Test production build (detached) |
+| `npm run docker:full` | Full stack with DB + Redis (detached) |
+| `npm run docker:status` | Check running containers |
+| `npm run docker:logs` | View container logs (follow mode) |
+| `npm run docker:shell` | Shell into dev container |
+| `npm run docker:down` | Stop all containers |
+| `npm run docker:clean` | Stop and remove volumes/images |
 
 ---
 
@@ -31,7 +76,6 @@ You are assisting with a **Next.js 16 landing page** project. This is a template
 ### TypeScript
 - Use strict TypeScript with proper typing
 - Prefer `interface` over `type` for object shapes
-- Use `React.FC` sparingly; prefer explicit return types
 - No `any` types unless absolutely necessary
 
 ### React/Next.js
@@ -42,18 +86,10 @@ You are assisting with a **Next.js 16 landing page** project. This is a template
 
 ### Tailwind CSS 4
 - Use utility classes directly in JSX
-- For Tailwind CSS 4, use `@import "tailwindcss"` not `@tailwind` directives
+- Use `@import "tailwindcss"` not `@tailwind` directives
 - Use `theme()` function in CSS, not `@apply` with custom variables
 - Color palette: slate (backgrounds), blue (primary), indigo (accents)
 - Use `dark:` prefix for dark mode variants
-
-### File Organization
-```
-app/
-├── page.tsx        # Edit this for content changes
-├── layout.tsx      # Metadata and fonts
-└── globals.css     # Global styles only
-```
 
 ---
 
@@ -74,12 +110,26 @@ The landing page has these sections (in order):
 
 ## Common Tasks
 
+### Starting Development
+```bash
+# 1. Start containers (runs in background)
+npm run docker:dev
+
+# 2. Verify it's running
+npm run docker:status
+
+# 3. Open browser
+open http://localhost:3000
+
+# 4. Edit files - changes appear automatically (hot-reload)
+```
+
 ### Updating Content
 When asked to update content:
 1. Read the current `app/page.tsx` first
 2. Make targeted edits to specific sections
 3. Preserve existing styling and structure
-4. Maintain TypeScript types
+4. Container auto-reloads on save
 
 ### Changing Styles
 When asked to change styling:
@@ -97,24 +147,44 @@ When asked to add new sections:
 
 ---
 
-## Docker Commands
+## Docker Commands (Direct)
 
-### Build Image
+### Development Container
 ```bash
-docker build -t landing-page:v1 .
+# Start (detached)
+docker compose --profile dev up -d --build
+
+# Check status
+docker compose ps
+
+# View logs
+docker compose logs -f dev
+
+# Shell into container
+docker compose --profile dev exec dev sh
+
+# Stop
+docker compose down
 ```
 
-### Run Container
+### Production Preview
 ```bash
-docker run -p 3000:3000 landing-page:v1
+# Build and run production container
+docker compose --profile prod up -d --build
+
+# Access at http://localhost:3001
 ```
 
-### Docker Compose
+### Troubleshooting
 ```bash
-docker-compose up --build      # Build and start
-docker-compose up -d           # Detached mode
-docker-compose down            # Stop and remove
-docker-compose logs -f         # Follow logs
+# Rebuild without cache
+docker compose --profile dev build --no-cache
+
+# View all containers (including stopped)
+docker ps -a
+
+# Clean up everything
+docker compose down -v --rmi local
 ```
 
 ---
@@ -129,8 +199,11 @@ aws ecr create-repository --repository-name landing-page --region us-west-2
 # Login to ECR
 aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin <account-id>.dkr.ecr.us-west-2.amazonaws.com
 
-# Tag image
-docker tag landing-page:v1 <account-id>.dkr.ecr.us-west-2.amazonaws.com/landing-page:latest
+# Build production image
+docker build -t landing-page:latest .
+
+# Tag for ECR
+docker tag landing-page:latest <account-id>.dkr.ecr.us-west-2.amazonaws.com/landing-page:latest
 
 # Push image
 docker push <account-id>.dkr.ecr.us-west-2.amazonaws.com/landing-page:latest
@@ -138,19 +211,18 @@ docker push <account-id>.dkr.ecr.us-west-2.amazonaws.com/landing-page:latest
 
 ### App Runner
 ```bash
-# Create service (use AWS Console or CLI)
+# Create service
 aws apprunner create-service \
   --service-name my-landing-page \
   --source-configuration '{
     "ImageRepository": {
       "ImageIdentifier": "<account-id>.dkr.ecr.us-west-2.amazonaws.com/landing-page:latest",
-      "ImageRepositoryType": "ECR"
+      "ImageRepositoryType": "ECR",
+      "ImageConfiguration": { "Port": "3000" }
     }
   }' \
-  --instance-configuration '{
-    "Cpu": "1024",
-    "Memory": "2048"
-  }'
+  --instance-configuration '{ "Cpu": "1024", "Memory": "2048" }' \
+  --region us-west-2
 ```
 
 ---
@@ -160,20 +232,20 @@ aws apprunner create-service \
 ### When Editing Code
 1. Show the specific changes being made
 2. Explain why the change achieves the goal
-3. Mention any side effects or considerations
+3. Changes apply immediately (hot-reload)
 4. Provide the complete updated code block
 
-### When Troubleshooting
-1. Ask clarifying questions if error is unclear
-2. Identify root cause before suggesting fixes
-3. Provide step-by-step solution
-4. Explain how to prevent similar issues
+### When Working with Containers
+1. Use npm scripts (they run detached)
+2. Remind user to check status: `npm run docker:status`
+3. Direct to logs if issues: `npm run docker:logs`
+4. Never leave user with blocking terminal
 
-### When Explaining Concepts
-1. Start with simple explanation
-2. Use analogies when helpful
-3. Provide concrete examples
-4. Link to relevant documentation
+### When Troubleshooting
+1. First check: Is container running? (`npm run docker:status`)
+2. Check logs: `npm run docker:logs`
+3. Identify root cause before suggesting fixes
+4. Provide step-by-step solution
 
 ---
 
@@ -184,49 +256,31 @@ aws apprunner create-service \
 - Change the Docker multi-stage build structure
 - Remove accessibility attributes
 - Use deprecated React patterns
-- Add unnecessary complexity
+- Run blocking commands (always use `-d` flag)
 
 ### Always
+- Use detached mode for container commands
 - Preserve existing functionality when editing
-- Test suggestions mentally before providing
 - Consider mobile-first responsive design
 - Maintain consistent code style
 - Include error handling where appropriate
 
 ---
 
-## Example Interactions
-
-### Good Request
-> "Update the hero section to say 'Jane Doe - UX Designer' with tagline 'Creating intuitive digital experiences'"
-
-**Response**: Edits `app/page.tsx` hero section with exact text, preserves styling.
-
-### Good Request
-> "Change the primary color from blue to green"
-
-**Response**: Updates Tailwind classes from `blue-*` to `green-*` throughout, checks dark mode variants.
-
-### Good Request
-> "Build and run the Docker container"
-
-**Response**: Provides exact commands, explains each step, mentions how to verify success.
-
----
-
 ## Quick Reference
 
-| Task | Command/Location |
-|------|------------------|
+| Task | Command |
+|------|---------|
+| Start dev environment | `npm run docker:dev` |
+| Check status | `npm run docker:status` |
+| View logs | `npm run docker:logs` |
+| Stop containers | `npm run docker:down` |
+| Test production build | `npm run docker:prod` |
 | Edit content | `app/page.tsx` |
 | Edit metadata | `app/layout.tsx` |
 | Edit global styles | `app/globals.css` |
-| Build Docker | `docker build -t name:tag .` |
-| Run Docker | `docker run -p 3000:3000 name:tag` |
-| Start dev | `npm run dev` |
-| Build prod | `npm run build` |
 
 ---
 
 **Last Updated**: 2026-01-25
-**Version**: 1.0
+**Version**: 2.0 (Container-First)
