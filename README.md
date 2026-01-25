@@ -51,7 +51,6 @@ That's it! The container includes Node.js, TypeScript, and all dependencies. Hot
 |---------|---------|
 | `npm run docker:dev` | Start development with hot-reload |
 | `npm run docker:prod` | Test production build locally |
-| `npm run docker:full` | Full stack (app + PostgreSQL + Redis) |
 | `npm run docker:down` | Stop all containers |
 | `npm run docker:logs` | View container logs |
 
@@ -90,34 +89,6 @@ This template teaches the real-world workflow:
 - No "works on my machine" issues
 - Deployment-ready from the start
 - Industry-standard workflow
-
-### Full Stack Services
-
-The `docker:full` profile adds backend services for complex apps:
-
-| Service | Port | Purpose |
-|---------|------|---------|
-| App | 3000 | Next.js development server |
-| PostgreSQL | 5432 | Database (`dev`/`devpassword`) |
-| Redis | 6379 | Caching/sessions |
-| Adminer | 8080 | Database management UI |
-
-```bash
-# Start full stack
-npm run docker:full
-
-# Access database UI
-open http://localhost:8080
-```
-
-### Optional: VS Code Dev Containers
-
-If you use VS Code or Cursor, the `.devcontainer/` config provides IDE integration:
-1. Install "Dev Containers" extension
-2. Open project → "Reopen in Container"
-3. Full IDE support inside the container
-
-This is optional - the Docker workflow works with any editor (Neovim, Antigravity, etc.).
 
 ---
 

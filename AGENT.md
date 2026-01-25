@@ -1,4 +1,4 @@
-# CLAUDE.md
+# AGENT.md
 
 This file delegates to the shared agent instructions.
 

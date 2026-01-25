@@ -24,7 +24,7 @@ RUN npm install -g \
 # Set working directory
 WORKDIR /workspace
 
-# Create non-root user for development (matches devcontainer.json)
+# Create non-root user for development
 RUN addgroup -g 1000 node || true && \
     adduser -u 1000 -G node -s /bin/bash -D node || true
 
