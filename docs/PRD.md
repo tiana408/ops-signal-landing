@@ -23,11 +23,20 @@ A ready-to-customize landing page template that enables students and professiona
 4. **Cost Concerns**: Many solutions are expensive or require ongoing subscriptions
 
 ### Target Users
+
+**Individual Users:**
 - Graduate students learning cloud deployment
 - Consultants needing professional web presence
 - Freelancers marketing their services
 - Job seekers wanting digital resumes
 - Professionals building personal brands
+
+**Enterprise Users:**
+- Program managers communicating strategic initiatives
+- Change management teams driving adoption
+- IT leaders explaining digital transformation
+- HR teams launching employee programs
+- Innovation teams building internal excitement
 
 ---
 
@@ -43,11 +52,12 @@ A ready-to-customize landing page template that enables students and professiona
 | Template Customization | Modify content via AI prompts | P0 |
 | Docker Containerization | Consistent local-to-production | P0 |
 | AWS Deployment | One-command cloud deploy | P0 |
-| Multiple Templates | Services, Portfolio, Resume | P1 |
+| Multiple Templates | Services, Portfolio, Resume, Enterprise | P1 |
 | Dark Mode | Built-in theme support | P1 |
 | Mobile Responsive | Works on all devices | P0 |
 | SEO Optimized | Meta tags, semantic HTML | P1 |
 | Prompt Library | Ready-to-use AI commands | P0 |
+| Enterprise Initiative Support | Vision, roadmap, benefits sections | P1 |
 
 ---
 
@@ -286,6 +296,72 @@ The README must include categorized prompts:
 **As a** designer
 **I want to** change colors and fonts
 **So that** the page matches my brand identity
+
+**Acceptance Criteria**:
+- [ ] Can change primary color with prompt
+- [ ] Can change fonts with prompt
+- [ ] Dark mode updates automatically
+- [ ] Mobile responsiveness maintained
+
+---
+
+## Enterprise User Stories
+
+### US-6: Initiative Communication Site
+**As a** program manager
+**I want to** transform the template into an initiative communication site
+**So that** I can share vision, roadmap, and benefits with stakeholders
+
+**Acceptance Criteria**:
+- [ ] Can convert to enterprise template with single prompt
+- [ ] Vision & Business Context section clearly explains the "why"
+- [ ] Benefits section addresses employees, customers, and business
+- [ ] Roadmap shows phases with status indicators
+- [ ] Executive sponsor prominently featured
+
+### US-7: Change Management Communication
+**As a** change management lead
+**I want to** address employee concerns proactively
+**So that** adoption is smooth and resistance is minimized
+
+**Acceptance Criteria**:
+- [ ] FAQ addresses common concerns (job impact, timeline, training)
+- [ ] "Get Involved" section provides clear participation paths
+- [ ] Feedback channels are prominently displayed
+- [ ] Progress updates show momentum and wins
+
+### US-8: Executive Stakeholder Alignment
+**As an** executive sponsor
+**I want to** communicate strategic alignment clearly
+**So that** leadership supports the initiative
+
+**Acceptance Criteria**:
+- [ ] Business context connects to company strategy/OKRs
+- [ ] ROI and success metrics are clearly stated
+- [ ] Governance structure is documented
+- [ ] Risk mitigation is addressed
+
+### US-9: Cross-Functional Team Coordination
+**As a** project coordinator
+**I want to** provide different information to different audiences
+**So that** each stakeholder group gets relevant details
+
+**Acceptance Criteria**:
+- [ ] Benefits tailored by stakeholder group
+- [ ] Technical details available for IT teams
+- [ ] Manager guidance available for people leaders
+- [ ] Customer-facing messaging for front-line staff
+
+### US-10: Progress Tracking and Transparency
+**As a** program leader
+**I want to** show real-time progress on the initiative
+**So that** stakeholders can see momentum and hold teams accountable
+
+**Acceptance Criteria**:
+- [ ] Metrics dashboard shows current vs target
+- [ ] Phase status clearly indicated (Active/Completed/Upcoming)
+- [ ] Recent wins and milestones highlighted
+- [ ] Easy to update as progress is made
 
 **Acceptance Criteria**:
 - [ ] Can change primary color with prompt

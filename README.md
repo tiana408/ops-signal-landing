@@ -14,6 +14,16 @@ A modern, responsive landing page that can serve as:
 - **Digital Resume/CV**
 - **Freelance Business** site
 - **Personal Brand** presence
+- **Enterprise Initiative** communication site (NEW!)
+
+### Enterprise Use Cases
+This template also works for internal corporate communications:
+- **Digital Transformation Programs** - Communicate vision, roadmap, and benefits
+- **Change Management Initiatives** - Align teams around organizational changes
+- **Strategic Projects** - Share business context and progress with stakeholders
+- **Innovation Programs** - Build excitement and drive adoption
+- **IT Modernization** - Explain cloud migrations, system upgrades
+- **Employee Programs** - DEI, wellness, sustainability initiatives
 
 **Live Demo**: [Your deployed URL here]
 
@@ -235,6 +245,65 @@ Make answers concise (2-3 sentences each)."
 | AWS errors | `"I'm getting this AWS error: [paste error]. What's wrong?"` |
 | Type errors | `"Fix all TypeScript errors in the project"` |
 
+### Enterprise Initiative Prompts
+
+#### Transform to Initiative Site
+```
+"Transform this landing page into an internal initiative communication site for [Initiative Name] sponsored by [Executive Name, Title]"
+```
+
+#### Vision & Business Context
+```
+"Replace the about section with a Vision & Business Context section explaining:
+- The Challenge: [Current business problem]
+- Our Vision: [Future state we're creating]
+- Why Now: [Market forces, competitive pressure, opportunity]
+- Strategic Alignment: [How this supports company OKRs]"
+```
+
+#### Benefits by Stakeholder
+```
+"Replace the services section with a Benefits section for three audiences:
+- For Employees: [How this improves their work]
+- For Customers: [How this improves their experience]
+- For the Business: [Revenue, cost, competitive impact]"
+```
+
+#### Program Roadmap
+```
+"Replace case studies with a Roadmap showing:
+- Phase 1 [Name] (Q1-Q2): [Deliverables] - Status: Active
+- Phase 2 [Name] (Q3-Q4): [Deliverables] - Status: Upcoming
+- Phase 3 [Name] (Next Year): [Deliverables] - Status: Future
+Include success metrics for each phase."
+```
+
+#### Internal FAQ
+```
+"Update FAQ for an internal initiative addressing:
+- How will this affect my day-to-day work?
+- Will there be job losses?
+- What if I have concerns or ideas?
+- What's the timeline for my team?"
+```
+
+#### Get Involved Section
+```
+"Replace contact section with a Get Involved section:
+- Ways to Participate: [Champion role, working groups, pilot program]
+- Stay Informed: [Newsletter, town halls, Slack channel]
+- Key Contacts: [Program lead, change management, support]"
+```
+
+#### Progress Updates
+```
+"Add a Metrics Dashboard section showing current vs target:
+- Adoption: [X]% → [Y]% employees using new system
+- Efficiency: [X] days → [Y] days cycle time
+- Savings: $[X]M → $[Y]M annual cost reduction
+- Satisfaction: [X] → [Y] employee NPS"
+```
+
 ---
 
 ## Content Templates
@@ -265,7 +334,17 @@ Choose a template that matches your use case:
 - Publications/projects
 - Download PDF option
 
-See `templates/` folder for complete examples.
+### 4. Enterprise Initiative Template (Internal Communications)
+- Vision & business context section
+- Executive sponsor highlight
+- Benefits by stakeholder (employees, customers, business)
+- Program roadmap with phases
+- Metrics dashboard
+- FAQ addressing change concerns
+- Get involved / participation options
+- Progress updates and milestones
+
+See `docs/CONTENT-TEMPLATES.md` for complete examples and prompts.
 
 ---
 

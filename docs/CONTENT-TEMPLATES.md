@@ -490,5 +490,391 @@ To switch templates:
 
 ---
 
+## Template 4: Enterprise Initiative Communication
+
+Best for: Internal Programs, Digital Transformation, Change Management, Strategic Initiatives
+
+### Use Cases
+
+- **Digital Transformation Programs** - Communicate new technology rollouts
+- **Organizational Change Initiatives** - Culture change, restructuring, new processes
+- **Strategic Projects** - Multi-year programs with business-wide impact
+- **Innovation Labs / Centers of Excellence** - Internal capability building
+- **Employee Programs** - Wellness, DEI, sustainability initiatives
+- **IT Modernization** - Cloud migration, system upgrades, security programs
+
+### Hero Section
+
+```
+Initiative Name: [Program/Initiative Name]
+Tagline: [Vision statement - what future state are we creating?]
+Sponsor: [Executive Sponsor Name & Title]
+Badge: [Phase/Status - e.g., "Now Launching", "Phase 2 Active"]
+
+Example:
+Initiative Name: Project Velocity
+Tagline: Transforming how we deliver value to customers - 50% faster by 2027
+Sponsor: Sponsored by Jane Smith, Chief Digital Officer
+Badge: Phase 1 Active
+```
+
+**Agentic Prompt**:
+```
+"Update the hero section for an enterprise initiative:
+- Title: Project Velocity
+- Tagline: Transforming how we deliver value to customers - 50% faster by 2027
+- Add executive sponsor: Jane Smith, Chief Digital Officer
+- Primary CTA: 'Get Involved' linking to #get-involved
+- Secondary CTA: 'View Roadmap' linking to #roadmap
+- Badge: 'Phase 1 Active - Q1 2026'"
+```
+
+### Vision & Business Context Section
+
+```
+The Challenge:
+[2-3 sentences describing the business problem or opportunity]
+
+Our Vision:
+[What does success look like? Paint the future state]
+
+Why Now:
+[Market forces, competitive pressure, regulatory requirements, opportunity window]
+
+Strategic Alignment:
+- Supports [Company Strategy/OKR 1]
+- Enables [Company Strategy/OKR 2]
+- Drives [Company Strategy/OKR 3]
+
+Example:
+The Challenge:
+Our current processes take 45 days from customer request to delivery. Competitors are doing it in 15. We're losing market share and customer satisfaction is declining.
+
+Our Vision:
+A streamlined, digitally-enabled organization where any customer request moves from intake to delivery in under 15 days, with full visibility at every step.
+
+Why Now:
+- Customer expectations have shifted post-pandemic
+- New competitors entering market with modern tech stacks
+- Board has prioritized operational excellence for 2026-2027
+```
+
+**Agentic Prompt**:
+```
+"Replace the about/authority section with a Vision & Business Context section:
+- Challenge: Our legacy systems create silos, manual handoffs take 45 days average
+- Vision: Unified digital platform enabling 15-day delivery cycles
+- Why Now: Customer expectations shifted, new competitors, board priority
+- Strategic Alignment: Supports Digital First strategy, Customer Excellence OKR, Cost Optimization goal"
+```
+
+### Benefits Section (Replace Services)
+
+```
+For Employees:
+Benefit 1: [How this helps their daily work]
+Benefit 2: [Career/growth opportunity]
+Benefit 3: [Reduced friction/frustration]
+
+For Customers:
+Benefit 1: [Improved experience]
+Benefit 2: [Faster service]
+Benefit 3: [Better outcomes]
+
+For the Business:
+Benefit 1: [Revenue/growth impact]
+Benefit 2: [Cost savings]
+Benefit 3: [Competitive advantage]
+
+Example:
+For Employees:
+- Eliminate 10+ hours/week of manual data entry
+- Access real-time dashboards instead of waiting for reports
+- New skills training in modern tools (fully funded)
+
+For Customers:
+- Self-service portal for 24/7 access
+- Real-time status updates on requests
+- 50% faster resolution times
+
+For the Business:
+- $15M annual cost savings from automation
+- 30% increase in customer retention
+- Foundation for future AI capabilities
+```
+
+**Agentic Prompt**:
+```
+"Replace the services section with a Benefits section showing value for three audiences:
+1. For Employees: Eliminate manual work, real-time dashboards, funded training
+2. For Customers: Self-service portal, real-time updates, 50% faster resolution
+3. For the Business: $15M savings, 30% retention increase, AI-ready foundation
+Mark 'For Employees' as featured since we need their buy-in"
+```
+
+### Roadmap/Timeline Section (Replace Case Studies)
+
+```
+Phase 1: [Name] - [Timeframe]
+Status: [Active/Completed/Upcoming]
+Key Deliverables:
+- [Deliverable 1]
+- [Deliverable 2]
+- [Deliverable 3]
+Success Metrics: [How we measure success]
+
+Phase 2: [Name] - [Timeframe]
+Status: [Upcoming]
+Key Deliverables:
+- [Deliverable 1]
+- [Deliverable 2]
+Success Metrics: [How we measure success]
+
+Phase 3: [Name] - [Timeframe]
+Status: [Future]
+Key Deliverables:
+- [Deliverable 1]
+- [Deliverable 2]
+Success Metrics: [How we measure success]
+
+Example:
+Phase 1: Foundation - Q1-Q2 2026
+Status: Active
+- New customer portal launched
+- Core team training complete
+- 3 pilot departments onboarded
+Success: 80% adoption in pilot groups
+
+Phase 2: Scale - Q3-Q4 2026
+Status: Upcoming
+- Enterprise-wide rollout
+- Legacy system retirement begins
+- Advanced automation features
+Success: 50% cycle time reduction
+
+Phase 3: Optimize - 2027
+Status: Future
+- AI-powered recommendations
+- Predictive analytics
+- Continuous improvement culture
+Success: Industry-leading delivery times
+```
+
+**Agentic Prompt**:
+```
+"Replace case studies with a Roadmap section showing 3 phases:
+1. Phase 1 'Foundation' (Q1-Q2 2026) - Active: Portal launch, team training, pilot departments. Success metric: 80% pilot adoption
+2. Phase 2 'Scale' (Q3-Q4 2026) - Upcoming: Enterprise rollout, legacy retirement, automation. Success metric: 50% faster cycles
+3. Phase 3 'Optimize' (2027) - Future: AI features, predictive analytics, continuous improvement. Success metric: Industry-leading times"
+```
+
+### FAQ Section (Tailored for Internal)
+
+```
+Q: How will this affect my day-to-day work?
+A: [Honest answer about changes, training provided, timeline]
+
+Q: Will there be job losses?
+A: [Clear answer about workforce impact, retraining, new roles]
+
+Q: What if I have concerns or ideas?
+A: [Feedback channels, who to contact, how input is used]
+
+Q: How were these decisions made?
+A: [Governance, stakeholder input, data that drove decisions]
+
+Q: What's the investment and expected ROI?
+A: [Budget transparency appropriate for audience, payback period]
+
+Q: How does this align with other initiatives?
+A: [Connection to other programs, avoiding initiative fatigue]
+
+Example:
+Q: How will this affect my day-to-day work?
+A: In Phase 1, minimal impact - just optional training sessions. In Phase 2, you'll transition to new tools with full support. We're providing 40 hours of paid training and dedicated change champions in each department.
+
+Q: Will there be job losses?
+A: No layoffs are planned. Automation will eliminate repetitive tasks, freeing you for higher-value work. We're actually creating 15 new roles in digital operations.
+
+Q: What if I have concerns or ideas?
+A: We want to hear from you! Use the feedback form below, attend monthly town halls, or reach out to your department's Change Champion. Every suggestion is reviewed by the steering committee.
+```
+
+**Agentic Prompt**:
+```
+"Update the FAQ section for an internal initiative with these questions:
+1. How will this affect my day-to-day work? - Minimal Phase 1 impact, full training provided for Phase 2
+2. Will there be job losses? - No layoffs, automation frees time for higher-value work, 15 new roles created
+3. What if I have concerns? - Feedback form, monthly town halls, Change Champions in each department
+4. What's the timeline for my team? - Department-specific rollout schedule available, your manager will communicate"
+```
+
+### Get Involved Section (Replace Contact)
+
+```
+Ways to Participate:
+1. [Role/Opportunity 1]: [Description and how to sign up]
+2. [Role/Opportunity 2]: [Description and how to sign up]
+3. [Role/Opportunity 3]: [Description and how to sign up]
+
+Stay Informed:
+- [Communication channel 1]: [Description]
+- [Communication channel 2]: [Description]
+- [Communication channel 3]: [Description]
+
+Key Contacts:
+- Program Lead: [Name], [Email]
+- Change Management: [Name], [Email]
+- Technical Questions: [Name/Team], [Email]
+
+Example:
+Ways to Participate:
+1. Become a Change Champion: Represent your team, get early access, shape the rollout (2 hrs/week)
+2. Join a Working Group: Process design, testing, training content (project-based)
+3. Pilot Program: Be among the first to use new tools (starts March 2026)
+
+Stay Informed:
+- Weekly Newsletter: Friday updates in your inbox
+- Monthly Town Hall: Live Q&A with leadership (recorded)
+- Slack Channel: #project-velocity for real-time updates
+
+Key Contacts:
+- Program Lead: Marcus Chen, marcus.chen@company.com
+- Change Management: Sarah Lopez, sarah.lopez@company.com
+- Technical Questions: velocity-support@company.com
+```
+
+**Agentic Prompt**:
+```
+"Replace the contact section with a Get Involved section:
+- Ways to Participate: Change Champion role (2 hrs/week), Working Groups (project-based), Pilot Program (March 2026)
+- Stay Informed: Weekly newsletter, Monthly town halls, Slack channel #project-velocity
+- Key Contacts: Program Lead Marcus Chen, Change Management Sarah Lopez, Technical support email"
+```
+
+### Leadership & Governance Section (Optional)
+
+```
+Executive Sponsor: [Name, Title]
+Role: Strategic direction, resource allocation, executive alignment
+
+Program Director: [Name, Title]
+Role: Day-to-day leadership, delivery accountability
+
+Steering Committee:
+- [Name], [Title] - [Area of responsibility]
+- [Name], [Title] - [Area of responsibility]
+- [Name], [Title] - [Area of responsibility]
+
+Working Groups:
+- [Group Name]: [Purpose] - Led by [Name]
+- [Group Name]: [Purpose] - Led by [Name]
+```
+
+### Metrics Dashboard Section (Optional)
+
+```
+Key Performance Indicators:
+
+Adoption Metrics:
+- [Metric 1]: [Current] → [Target]
+- [Metric 2]: [Current] → [Target]
+
+Business Impact:
+- [Metric 1]: [Current] → [Target]
+- [Metric 2]: [Current] → [Target]
+
+Employee Experience:
+- [Metric 1]: [Current] → [Target]
+- [Metric 2]: [Current] → [Target]
+
+Example:
+Adoption: 15% → 80% of employees using new portal
+Cycle Time: 45 days → 15 days average
+Cost: $50M → $35M operational costs
+Satisfaction: 3.2 → 4.5 employee NPS for tools
+```
+
+**Agentic Prompt**:
+```
+"Add a Metrics Dashboard section showing:
+- Adoption: 15% current → 80% target employees on new portal
+- Cycle Time: 45 days current → 15 days target
+- Cost Savings: $0 current → $15M target annual savings
+- Employee Satisfaction: 3.2 current → 4.5 target tool NPS"
+```
+
+---
+
+## Enterprise Initiative Best Practices
+
+### Communication Principles
+
+1. **Lead with "Why"** - Connect to business strategy and personal impact
+2. **Be Transparent** - Share challenges, not just successes
+3. **Show Progress** - Regular updates build trust and momentum
+4. **Enable Two-Way Communication** - Feedback loops are essential
+5. **Celebrate Wins** - Recognize contributions and milestones
+
+### Content Tone
+
+- **Confident but not arrogant** - Acknowledge complexity
+- **Inclusive language** - "We" not "management decided"
+- **Action-oriented** - Always include next steps
+- **Honest about challenges** - Builds credibility
+- **Future-focused** - Paint the vision clearly
+
+### Visual Design Tips
+
+- Use company brand colors for consistency
+- Include progress indicators (phases, percentages)
+- Show faces of leadership and team members
+- Use icons to represent different stakeholder groups
+- Keep mobile-friendly for frontline workers
+
+### Update Frequency
+
+| Content Type | Update Frequency |
+|--------------|------------------|
+| Roadmap/Timeline | Monthly |
+| Metrics Dashboard | Weekly/Monthly |
+| FAQ | As questions arise |
+| News/Updates | Weekly |
+| Leadership Messages | Quarterly |
+
+---
+
+## Enterprise-Specific Prompts
+
+### Initiative Setup
+```
+"Transform this landing page into an internal initiative communication site for [Initiative Name]"
+"Add an executive sponsor section featuring [Name, Title]"
+"Create a 'Why This Matters' section explaining [business context]"
+```
+
+### Stakeholder-Specific Views
+```
+"Add a section for managers explaining how to support their teams through this change"
+"Create a technical deep-dive section for IT stakeholders"
+"Add a customer-facing FAQ for client-facing teams"
+```
+
+### Progress Communication
+```
+"Update the roadmap to show Phase 1 is complete with [achievements]"
+"Add a 'Recent Wins' section highlighting [milestone]"
+"Update metrics dashboard with latest numbers: [metrics]"
+```
+
+### Change Management
+```
+"Add a 'What's Changing' comparison showing before vs. after"
+"Create a training resources section with links to [resources]"
+"Add testimonials from pilot program participants"
+```
+
+---
+
 **Last Updated**: 2026-01-25
-**Version**: 1.0
+**Version**: 1.1
