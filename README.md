@@ -96,14 +96,105 @@ agentic-landing-template/
 │   ├── DEPLOYMENT-ROADMAP.md # AWS deployment guide
 │   └── CONTENT-TEMPLATES.md  # Content examples
 ├── templates/
-│   ├── services.tsx        # Services page template
-│   ├── portfolio.tsx       # Portfolio template
-│   └── resume.tsx          # Resume/CV template
+│   ├── services.tsx        # Consulting services template
+│   ├── portfolio.tsx       # Designer/developer portfolio template
+│   ├── resume.tsx          # Digital resume/CV template
+│   └── enterprise.tsx      # Enterprise initiative template
 ├── GEMINI.md               # System prompt for Gemini CLI
 ├── CLAUDE.md               # System prompt for Claude Code
 ├── Dockerfile              # Container configuration
 ├── docker-compose.yml      # Local Docker setup
 └── package.json            # Dependencies
+```
+
+---
+
+## Using Templates
+
+This project includes **4 ready-to-use templates** optimized for different use cases. Choose the one that fits your needs:
+
+### Template Options
+
+| Template | Best For | Key Sections |
+|----------|----------|--------------|
+| **Default** (`app/page.tsx`) | General personal branding | Hero, About, Services, Work, FAQ, Contact |
+| **Services** (`templates/services.tsx`) | Consultants, coaches, freelancers | DIY/DWY/DFY tiers, case studies, testimonials |
+| **Portfolio** (`templates/portfolio.tsx`) | Designers, developers, creatives | Project grid, skills, experience timeline |
+| **Resume** (`templates/resume.tsx`) | Job seekers, career changers | Experience, skills matrix, education, projects |
+| **Enterprise** (`templates/enterprise.tsx`) | Internal initiatives, change management | Vision, benefits, roadmap, FAQ, get involved |
+
+### Quick Start with Templates
+
+**Option 1: Copy and Replace**
+```bash
+# For consulting services
+cp templates/services.tsx app/page.tsx
+
+# For portfolio
+cp templates/portfolio.tsx app/page.tsx
+
+# For resume
+cp templates/resume.tsx app/page.tsx
+
+# For enterprise initiative
+cp templates/enterprise.tsx app/page.tsx
+```
+
+**Option 2: Use AI to Switch**
+```
+"Replace the current page.tsx with the services template optimized for consultants"
+```
+
+```
+"Switch to the portfolio template for showcasing my design work"
+```
+
+```
+"Use the enterprise template for our digital transformation initiative"
+```
+
+### Customizing Templates
+
+Each template has placeholder content marked with `[brackets]`. Use AI prompts to customize:
+
+**Services Template:**
+```
+"Customize the services template with:
+- Name: Sarah Chen
+- Specialty: AI Strategy Consulting
+- Tier 1: AI Readiness Assessment - $497
+- Tier 2: Implementation Coaching - $2,500/month
+- Tier 3: Full-Service AI Transformation - Custom"
+```
+
+**Portfolio Template:**
+```
+"Update the portfolio template with:
+- Name: Alex Rivera
+- Role: Product Designer
+- Add 5 projects from my work at [Company]
+- Skills: Figma, Framer, React, TailwindCSS"
+```
+
+**Resume Template:**
+```
+"Customize the resume with:
+- Name: Jordan Park
+- Target role: Senior Software Engineer
+- Current: Tech Lead at StartupCo (2022-present)
+- Previous: SDE II at BigTech (2019-2022)
+- Skills: TypeScript, React, AWS, Go"
+```
+
+**Enterprise Template:**
+```
+"Customize the enterprise template for 'Project Phoenix':
+- Initiative: Cloud Migration Program
+- Sponsor: CTO Jane Wilson
+- Phase 1: Assessment (Complete)
+- Phase 2: Pilot Migration (Active - 65%)
+- Phase 3: Full Migration (Upcoming)
+- Key metric: 40% cost reduction target"
 ```
 
 ---
