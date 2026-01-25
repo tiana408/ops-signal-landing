@@ -2,7 +2,7 @@
 
 **Build and deploy your professional landing page using AI-assisted development**
 
-A complete template for creating personal branding landing pages (services, portfolio, resume) using Agentic Coding tools like **Gemini CLI** or **Claude Code**. Deploy to AWS in minutes with natural language commands.
+A complete template for creating personal branding landing pages (services, portfolio, resume) using Agentic Coding tools like **Gemini CLI**, **Claude Code**, or **Codex**. Deploy to AWS in minutes with natural language commands.
 
 ---
 
@@ -14,7 +14,7 @@ A modern, responsive landing page that can serve as:
 - **Digital Resume/CV**
 - **Freelance Business** site
 - **Personal Brand** presence
-- **Enterprise Initiative** communication site (NEW!)
+- **Enterprise Initiative** communication site
 
 ### Enterprise Use Cases
 This template also works for internal corporate communications:
@@ -29,16 +29,28 @@ This template also works for internal corporate communications:
 
 ---
 
+## Prerequisites
+
+| Required | Purpose |
+|----------|---------|
+| [Docker Desktop](https://www.docker.com/products/docker-desktop/) | Container runtime for development and deployment |
+| **Any CLI Coding Agent** (choose one): | AI-assisted development |
+| - [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Google's agentic coding assistant |
+| - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Anthropic's agentic coding assistant |
+| - [Codex CLI](https://github.com/openai/codex) | OpenAI's agentic coding assistant |
+
+---
+
 ## Quick Start
 
-**Prerequisites:** [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+```
+"Clone the agentic-landing-template repository and start the development container"
+```
 
+Or manually:
 ```bash
-# 1. Clone the repository
 git clone https://github.com/YOUR-USERNAME/agentic-landing-template.git
 cd agentic-landing-template
-
-# 2. Start development container
 npm run docker:dev
 # Open http://localhost:3000
 ```
@@ -47,28 +59,33 @@ That's it! The container includes Node.js, TypeScript, and all dependencies. Hot
 
 ### Development Commands
 
-| Command | Purpose |
-|---------|---------|
-| `npm run docker:dev` | Start development with hot-reload |
-| `npm run docker:prod` | Test production build locally |
-| `npm run docker:down` | Stop all containers |
-| `npm run docker:logs` | View container logs |
+| Natural Language (say this to your AI agent) | CLI Command |
+|---------------------------------------------|-------------|
+| "Start the development container with hot-reload" | `npm run docker:dev` |
+| "Build and run the production container" | `npm run docker:prod` |
+| "Stop all running containers" | `npm run docker:down` |
+| "Show me the container logs" | `npm run docker:logs` |
+| "What's the status of my containers?" | `npm run docker:status` |
+| "Open a shell in the dev container" | `npm run docker:shell` |
+| "Clean up all containers and volumes" | `npm run docker:clean` |
 
-### Customize with AI
+### Customize Your Page
 
-Open a new terminal and use your preferred AI coding assistant:
+Open a new terminal and tell your AI agent what you want:
 
-**Gemini CLI:**
-```bash
-gemini "Update the hero section with my name 'John Smith' and tagline 'Full Stack Developer'"
+```
+"Update the hero section with my name 'John Smith' and tagline 'Full Stack Developer'"
 ```
 
-**Claude Code:**
-```bash
-claude "Update the hero section with my name 'John Smith' and tagline 'Full Stack Developer'"
+```
+"Change the primary color from blue to teal throughout the site"
 ```
 
-The AI assistant can read/edit files while the container serves your app. Changes appear immediately.
+```
+"Add a testimonials section with 3 client quotes"
+```
+
+The AI assistant reads and edits files while the container serves your app. Changes appear immediately.
 
 ---
 
@@ -128,8 +145,10 @@ agentic-landing-template/
 │   └── enterprise.tsx      # Enterprise initiative template
 ├── GEMINI.md               # System prompt for Gemini CLI
 ├── CLAUDE.md               # System prompt for Claude Code
-├── Dockerfile              # Container configuration
-├── docker-compose.yml      # Local Docker setup
+├── AGENTS.md               # Shared agent instructions
+├── Dockerfile              # Production container configuration
+├── Dockerfile.dev          # Development container configuration
+├── docker-compose.yml      # Docker orchestration
 └── package.json            # Dependencies
 ```
 
@@ -151,37 +170,16 @@ This project includes **4 ready-to-use templates** optimized for different use c
 
 ### Quick Start with Templates
 
-**Option 1: Copy and Replace**
-```bash
-# For consulting services
-cp templates/services.tsx app/page.tsx
-
-# For portfolio
-cp templates/portfolio.tsx app/page.tsx
-
-# For resume
-cp templates/resume.tsx app/page.tsx
-
-# For enterprise initiative
-cp templates/enterprise.tsx app/page.tsx
-```
-
-**Option 2: Use AI to Switch**
-```
-"Replace the current page.tsx with the services template optimized for consultants"
-```
-
-```
-"Switch to the portfolio template for showcasing my design work"
-```
-
-```
-"Use the enterprise template for our digital transformation initiative"
-```
+| Natural Language | CLI Command |
+|-----------------|-------------|
+| "Switch to the services template for consultants" | `cp templates/services.tsx app/page.tsx` |
+| "Use the portfolio template for my design work" | `cp templates/portfolio.tsx app/page.tsx` |
+| "Change to the resume template" | `cp templates/resume.tsx app/page.tsx` |
+| "Use the enterprise template for our initiative" | `cp templates/enterprise.tsx app/page.tsx` |
 
 ### Customizing Templates
 
-Each template has placeholder content marked with `[brackets]`. Use AI prompts to customize:
+Each template has placeholder content marked with `[brackets]`. Tell your AI agent what to customize:
 
 **Services Template:**
 ```
@@ -227,16 +225,16 @@ Each template has placeholder content marked with `[brackets]`. Use AI prompts t
 
 ## Prompt Library
 
-Copy and paste these prompts into your agentic CLI tool. Replace bracketed content with your information.
+Copy and paste these natural language prompts to your AI agent. Replace bracketed content with your information.
 
 ### Setup & Configuration
 
-| Task | Prompt |
-|------|--------|
-| Install dependencies | `"Install all npm dependencies for this project"` |
-| Start dev server | `"Start the Next.js development server"` |
-| Build for production | `"Build the project for production"` |
-| Check for errors | `"Run TypeScript type checking and fix any errors"` |
+| Natural Language | What It Does |
+|-----------------|--------------|
+| "Install all the dependencies for this project" | Runs npm install |
+| "Start the development server" | Starts Next.js dev server |
+| "Build this project for production" | Creates optimized production build |
+| "Check for TypeScript errors and fix them" | Runs type checking |
 
 ### Content Customization
 
@@ -308,59 +306,59 @@ Make answers concise (2-3 sentences each)."
 
 ### Styling & Design
 
-| Task | Prompt |
-|------|--------|
-| Change color scheme | `"Change the primary color from blue to [green/purple/orange/teal] throughout the site"` |
-| Update fonts | `"Change the display font to [Poppins/Montserrat/Raleway] and body font to [Open Sans/Lato/Roboto]"` |
-| Add dark mode | `"Ensure all sections have proper dark mode styling with slate backgrounds"` |
-| Improve mobile | `"Review and fix mobile responsiveness issues, especially in the [section name]"` |
-| Add animations | `"Add subtle fade-in animations when sections scroll into view"` |
+| Natural Language | What It Does |
+|-----------------|--------------|
+| "Change the primary color from blue to [green/purple/teal]" | Updates color scheme site-wide |
+| "Change the fonts to Poppins for headings and Open Sans for body" | Updates typography |
+| "Make sure all sections have proper dark mode styling" | Fixes dark mode issues |
+| "Fix the mobile responsiveness in the [section name]" | Improves mobile layout |
+| "Add subtle fade-in animations when sections scroll into view" | Adds scroll animations |
 
-### Docker & Local Testing
+### Docker & Container Operations
 
-| Task | Prompt |
-|------|--------|
-| Build Docker image | `"Build a Docker image tagged my-landing:v1"` |
-| Run container | `"Run the Docker container on port 3000"` |
-| Check container health | `"Show me the status of running Docker containers"` |
-| View container logs | `"Show the logs from my running container"` |
-| Stop container | `"Stop and remove all running containers"` |
-| Rebuild after changes | `"Rebuild the Docker image and restart the container"` |
+| Natural Language | CLI Command |
+|-----------------|-------------|
+| "Build a Docker image tagged my-landing:v1" | `docker build -t my-landing:v1 .` |
+| "Run the Docker container on port 3000" | `docker run -p 3000:3000 my-landing:v1` |
+| "Show me the status of running containers" | `docker ps` |
+| "Show the logs from my running container" | `docker logs <container-id>` |
+| "Stop and remove all running containers" | `docker stop $(docker ps -q) && docker rm $(docker ps -aq)` |
+| "Rebuild the image and restart the container" | `npm run docker:down && npm run docker:dev` |
 
 ### AWS Deployment
 
-| Task | Prompt |
-|------|--------|
-| Configure AWS CLI | `"Help me configure AWS CLI with my credentials"` |
-| Create ECR repository | `"Create an ECR repository named my-landing-page in us-west-2"` |
-| Login to ECR | `"Authenticate Docker with my ECR registry"` |
-| Push to ECR | `"Tag and push my-landing:v1 to my ECR repository"` |
-| Deploy to App Runner | `"Deploy my ECR image to AWS App Runner with 1 vCPU and 2GB memory"` |
-| Get deployment URL | `"Show me the public URL of my App Runner service"` |
-| Check deployment status | `"Check the status of my App Runner deployment"` |
-| View CloudWatch logs | `"Show me recent logs from my App Runner service"` |
-| Estimate costs | `"Estimate the monthly cost of running this on App Runner"` |
-| Clean up resources | `"Delete my App Runner service and ECR repository to avoid charges"` |
+| Natural Language | CLI Command |
+|-----------------|-------------|
+| "Help me configure AWS CLI with my credentials" | `aws configure` |
+| "Create an ECR repository named my-landing-page in us-west-2" | `aws ecr create-repository --repository-name my-landing-page --region us-west-2` |
+| "Log Docker into my ECR registry" | `aws ecr get-login-password --region us-west-2 \| docker login --username AWS --password-stdin <account>.dkr.ecr.us-west-2.amazonaws.com` |
+| "Tag and push my-landing:v1 to ECR" | `docker tag my-landing:v1 <ecr-uri>:latest && docker push <ecr-uri>:latest` |
+| "Deploy my ECR image to App Runner with 1 vCPU and 2GB memory" | `aws apprunner create-service --service-name my-landing --source-configuration ...` |
+| "Show me the public URL of my App Runner service" | `aws apprunner describe-service --service-arn <arn> --query 'Service.ServiceUrl'` |
+| "Check the status of my App Runner deployment" | `aws apprunner describe-service --service-arn <arn>` |
+| "Show me recent logs from my App Runner service" | `aws logs tail /aws/apprunner/my-landing/service --follow` |
+| "Estimate the monthly cost of running this on App Runner" | Approximately $5-15/month |
+| "Delete my App Runner service to avoid charges" | `aws apprunner delete-service --service-arn <arn>` |
 
 ### Git & Version Control
 
-| Task | Prompt |
-|------|--------|
-| Initialize git | `"Initialize git and create initial commit"` |
-| Create feature branch | `"Create a new branch for adding [feature name]"` |
-| Commit changes | `"Commit my changes with a descriptive message"` |
-| Push to GitHub | `"Push my branch to GitHub"` |
-| Create PR | `"Create a pull request for my changes"` |
+| Natural Language | CLI Command |
+|-----------------|-------------|
+| "Initialize git and create the first commit" | `git init && git add . && git commit -m "Initial commit"` |
+| "Create a new branch for adding [feature name]" | `git checkout -b feature/[feature-name]` |
+| "Commit my changes with a good message" | `git add . && git commit -m "[message]"` |
+| "Push my branch to GitHub" | `git push -u origin [branch-name]` |
+| "Create a pull request for my changes" | `gh pr create --title "[title]" --body "[description]"` |
 
 ### Troubleshooting
 
-| Issue | Prompt |
-|-------|--------|
-| Build errors | `"The build is failing with this error: [paste error]. Help me fix it."` |
-| Styling issues | `"The [section] looks broken on mobile. Fix the responsive design."` |
-| Docker issues | `"My Docker container exits immediately. Debug and fix the issue."` |
-| AWS errors | `"I'm getting this AWS error: [paste error]. What's wrong?"` |
-| Type errors | `"Fix all TypeScript errors in the project"` |
+| Natural Language | What To Do |
+|-----------------|------------|
+| "The build is failing with this error: [paste error]" | AI analyzes and fixes the error |
+| "The [section] looks broken on mobile" | AI fixes responsive design |
+| "My Docker container exits immediately" | AI debugs container issues |
+| "I'm getting this AWS error: [paste error]" | AI diagnoses AWS configuration |
+| "Fix all TypeScript errors in the project" | AI runs typecheck and fixes errors |
 
 ### Enterprise Initiative Prompts
 
@@ -491,7 +489,7 @@ Each PRD template provides:
 | **Success Metrics** | How to measure if your page is working |
 | **Content Requirements** | Detailed guidance for each section |
 
-**Agentic Prompt to Generate Custom PRD**:
+**Generate a Custom PRD:**
 ```
 "Create a PRD for my [consulting/portfolio/resume/initiative] landing page
 targeting [audience] who need [what they need].
@@ -511,11 +509,11 @@ Each content template provides:
 
 ### Step 4: Build and Deploy
 
-| Phase | Documentation | Key Actions |
-|-------|---------------|-------------|
-| **Local Development** | [Quick Start](#quick-start-5-minutes) | Fork, install, customize |
-| **Docker Testing** | [DEPLOYMENT-ROADMAP.md](docs/DEPLOYMENT-ROADMAP.md#phase-2-docker-containerization-day-1-2) | Build image, test container |
-| **AWS Deployment** | [DEPLOYMENT-ROADMAP.md](docs/DEPLOYMENT-ROADMAP.md#phase-5-deploy-to-app-runner-day-2-3) | Push to ECR, deploy to App Runner |
+| Phase | Documentation | Natural Language |
+|-------|---------------|------------------|
+| **Local Development** | [Quick Start](#quick-start) | "Start the dev container" |
+| **Docker Testing** | [DEPLOYMENT-ROADMAP.md](docs/DEPLOYMENT-ROADMAP.md) | "Build and test the production container" |
+| **AWS Deployment** | [DEPLOYMENT-ROADMAP.md](docs/DEPLOYMENT-ROADMAP.md) | "Push to ECR and deploy to App Runner" |
 
 ### Documentation Map
 
@@ -562,8 +560,8 @@ Each content template provides:
 │           │                        │                            │
 │           ▼                        ▼                            │
 │  ┌──────────────────┐     ┌──────────────────┐                 │
-│  │ Docker + AWS     │     │ Live site on     │                 │
-│  │ commands         │     │ App Runner       │                 │
+│  │ Tell your AI:    │     │ Live site on     │                 │
+│  │ "Deploy to AWS"  │     │ App Runner       │                 │
 │  └──────────────────┘     └──────────────────┘                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -586,32 +584,32 @@ Each content template provides:
 
 ### Phase 1: Local Development (Day 1)
 1. Fork and clone repository
-2. Install dependencies
+2. Start dev container: "Start the development container"
 3. Customize content with prompts
-4. Test locally with `npm run dev`
+4. View at http://localhost:3000
 
 ### Phase 2: Docker Testing (Day 1-2)
-1. Build Docker image
-2. Test container locally
+1. "Build and run the production container"
+2. Test at http://localhost:3001
 3. Verify all sections render
 4. Check mobile responsiveness
 
 ### Phase 3: AWS Setup (Day 2)
 1. Create AWS account (if needed)
-2. Configure AWS CLI
-3. Create ECR repository
+2. "Help me configure AWS CLI"
+3. "Create an ECR repository"
 4. Set up IAM permissions
 
 ### Phase 4: Production Deploy (Day 2-3)
-1. Push image to ECR
-2. Create App Runner service
+1. "Push my image to ECR"
+2. "Deploy to App Runner"
 3. Configure custom domain (optional)
 4. Set up monitoring
 
 ### Phase 5: Maintenance
 1. Update content as needed
 2. Monitor costs (~$5-15/month)
-3. Review CloudWatch logs
+3. "Show me my App Runner logs"
 4. Update dependencies quarterly
 
 ---
@@ -633,6 +631,7 @@ Each content template provides:
 
 This project includes optimized system prompts for AI assistants:
 
+- **AGENTS.md** - Shared instructions for all AI coding agents
 - **GEMINI.md** - Configuration for Google's Gemini CLI
 - **CLAUDE.md** - Configuration for Anthropic's Claude Code
 
@@ -652,7 +651,7 @@ These files help the AI understand your project structure and coding standards.
 ### Getting Help
 - Open an issue on GitHub
 - Check the FAQ in documentation
-- Review troubleshooting prompts above
+- Tell your AI agent: "The build is failing with this error: [paste error]"
 
 ---
 
@@ -671,4 +670,4 @@ Course: Agentic Development with Cloud Deployment
 
 ---
 
-**Ready to build your landing page?** Start with the [Quick Start](#quick-start-5-minutes) above!
+**Ready to build your landing page?** Start with the [Quick Start](#quick-start) above!
