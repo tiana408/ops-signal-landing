@@ -31,88 +31,93 @@ This template also works for internal corporate communications:
 
 ## Quick Start
 
-Choose your preferred development method:
-
-### Option A: Local Development (5 Minutes)
+**Prerequisites:** [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ```bash
-# 1. Fork & Clone
+# 1. Clone the repository
 git clone https://github.com/YOUR-USERNAME/agentic-landing-template.git
 cd agentic-landing-template
 
-# 2. Install & Run
-npm install
-npm run dev
+# 2. Start development container
+npm run docker:dev
 # Open http://localhost:3000
 ```
 
-### Option B: Dev Container (VS Code/Cursor)
+That's it! The container includes Node.js, TypeScript, and all dependencies. Hot-reload is enabled - edit files and see changes instantly.
 
-**Prerequisites:** Docker Desktop, VS Code with Dev Containers extension (or Cursor)
+### Development Commands
 
-1. Clone the repo
-2. Open in VS Code/Cursor
-3. Click "Reopen in Container" when prompted
-4. Terminal opens with everything ready: `npm run dev`
-
-### Option C: Docker Development
-
-```bash
-# Hot-reload development
-npm run docker:dev
-
-# Production preview
-npm run docker:prod
-
-# Full stack (with PostgreSQL, Redis)
-npm run docker:full
-```
+| Command | Purpose |
+|---------|---------|
+| `npm run docker:dev` | Start development with hot-reload |
+| `npm run docker:prod` | Test production build locally |
+| `npm run docker:full` | Full stack (app + PostgreSQL + Redis) |
+| `npm run docker:down` | Stop all containers |
+| `npm run docker:logs` | View container logs |
 
 ### Customize with AI
 
-Using **Gemini CLI**:
+Open a new terminal and use your preferred AI coding assistant:
+
+**Gemini CLI:**
 ```bash
 gemini "Update the hero section with my name 'John Smith' and tagline 'Full Stack Developer'"
 ```
 
-Using **Claude Code**:
+**Claude Code:**
 ```bash
 claude "Update the hero section with my name 'John Smith' and tagline 'Full Stack Developer'"
 ```
 
+The AI assistant can read/edit files while the container serves your app. Changes appear immediately.
+
 ---
 
-## Development Environments
+## Development → Production Pipeline
 
-This template supports multiple development scenarios:
+This template teaches the real-world workflow:
 
-| Environment | Command | Use Case |
-|-------------|---------|----------|
-| **Local** | `npm run dev` | Quick start, simple projects |
-| **Dev Container** | Open in VS Code | Consistent environment, team collaboration |
-| **Docker Dev** | `npm run docker:dev` | Isolated development, mirrors production |
-| **Docker Full** | `npm run docker:full` | Complex apps (DB, cache, etc.) |
+```
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│  Develop    │ ──▶ │ Containerize│ ──▶ │   Deploy    │
+│ docker:dev  │     │ docker:prod │     │ AWS App     │
+│             │     │             │     │ Runner      │
+└─────────────┘     └─────────────┘     └─────────────┘
+```
 
-### Dev Container Features
-
-When using VS Code/Cursor Dev Containers:
-- Node.js 20 with TypeScript
-- Git, GitHub CLI, AWS CLI pre-installed
-- Docker-in-Docker for container builds
-- ESLint, Prettier, Tailwind CSS IntelliSense
-- Ports auto-forwarded (3000, 3001)
+**Why Docker from Day 1?**
+- Same environment locally and in production
+- No "works on my machine" issues
+- Deployment-ready from the start
+- Industry-standard workflow
 
 ### Full Stack Services
 
-The `docker:full` profile includes:
+The `docker:full` profile adds backend services for complex apps:
 
 | Service | Port | Purpose |
 |---------|------|---------|
 | App | 3000 | Next.js development server |
-| Production | 3001 | Production build preview |
 | PostgreSQL | 5432 | Database (`dev`/`devpassword`) |
 | Redis | 6379 | Caching/sessions |
-| Adminer | 8080 | Database UI |
+| Adminer | 8080 | Database management UI |
+
+```bash
+# Start full stack
+npm run docker:full
+
+# Access database UI
+open http://localhost:8080
+```
+
+### Optional: VS Code Dev Containers
+
+If you use VS Code or Cursor, the `.devcontainer/` config provides IDE integration:
+1. Install "Dev Containers" extension
+2. Open project → "Reopen in Container"
+3. Full IDE support inside the container
+
+This is optional - the Docker workflow works with any editor (Neovim, Antigravity, etc.).
 
 ---
 

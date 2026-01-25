@@ -1,7 +1,8 @@
 {
   "name": "Agentic Landing Template",
-  "dockerComposeFile": "../docker-compose.yml",
+  "dockerComposeFile": ["../docker-compose.yml"],
   "service": "devcontainer",
+  "runServices": ["devcontainer"],
   "workspaceFolder": "/workspace",
 
   "features": {

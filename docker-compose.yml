@@ -1,34 +1,14 @@
 # Agentic Landing Template - Docker Compose
-# Supports multiple development scenarios:
-# 1. Dev Container (VS Code/Cursor) - docker compose up devcontainer
-# 2. Hot-reload development - docker compose up dev
-# 3. Production preview - docker compose up app
-# 4. Full stack with services - docker compose --profile full up
+# Primary workflow: develop → containerize → deploy
+#
+# Commands:
+#   npm run docker:dev   - Development with hot-reload (default)
+#   npm run docker:prod  - Test production build locally
+#   npm run docker:full  - Full stack with PostgreSQL + Redis
 
 services:
   # ============================================================
-  # DEV CONTAINER - For VS Code / Cursor Dev Containers
-  # ============================================================
-  devcontainer:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - .:/workspace:cached
-      - node_modules:/workspace/node_modules
-      - next_cache:/workspace/.next
-    ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=development
-      - NEXT_TELEMETRY_DISABLED=1
-      - WATCHPACK_POLLING=true
-    command: sleep infinity
-    networks:
-      - app-network
-
-  # ============================================================
-  # DEV - Standalone hot-reload development
+  # DEV - Hot-reload development (PRIMARY)
   # ============================================================
   dev:
     build:
@@ -135,6 +115,29 @@ services:
     profiles:
       - db
       - full
+
+  # ============================================================
+  # DEVCONTAINER - For VS Code/Cursor (optional)
+  # ============================================================
+  devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/workspace:cached
+      - node_modules:/workspace/node_modules
+      - next_cache:/workspace/.next
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+      - WATCHPACK_POLLING=true
+    command: sleep infinity
+    networks:
+      - app-network
+    profiles:
+      - devcontainer
 
 # ============================================================
 # VOLUMES - Persistent storage
