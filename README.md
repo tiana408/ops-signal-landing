@@ -348,6 +348,123 @@ See `docs/CONTENT-TEMPLATES.md` for complete examples and prompts.
 
 ---
 
+## How to Use This Project Documentation
+
+This project includes comprehensive documentation for each use case. Follow the guide below based on your needs.
+
+### Step 1: Choose Your Use Case
+
+| If you're building... | Start with PRD | Then use Content Template |
+|-----------------------|----------------|---------------------------|
+| Consulting/Freelance site | [PRD Template 1: Consulting Services](docs/PRD-TEMPLATES.md#prd-template-1-consulting-services) | [Template 1: Consulting Services](docs/CONTENT-TEMPLATES.md#template-1-consulting-services) |
+| Designer/Developer portfolio | [PRD Template 2: Portfolio](docs/PRD-TEMPLATES.md#prd-template-2-portfolio-designersdevelopers) | [Template 2: Portfolio](docs/CONTENT-TEMPLATES.md#template-2-portfolio-designersdevelopers) |
+| Digital resume/CV | [PRD Template 3: Digital Resume](docs/PRD-TEMPLATES.md#prd-template-3-digital-resume) | [Template 3: Digital Resume](docs/CONTENT-TEMPLATES.md#template-3-digital-resume) |
+| Internal initiative site | [PRD Template 4: Enterprise Initiative](docs/PRD-TEMPLATES.md#prd-template-4-enterprise-initiative-communication) | [Template 4: Enterprise Initiative](docs/CONTENT-TEMPLATES.md#template-4-enterprise-initiative-communication) |
+
+### Step 2: Review Your PRD Template
+
+Each PRD template provides:
+
+| Section | What You'll Learn |
+|---------|-------------------|
+| **Executive Summary** | What your landing page should achieve |
+| **Problem Statement** | Who your target audience is and their challenges |
+| **User Stories** | Specific requirements with acceptance criteria |
+| **Functional Requirements** | Which sections to include and what content |
+| **Success Metrics** | How to measure if your page is working |
+| **Content Requirements** | Detailed guidance for each section |
+
+**Agentic Prompt to Generate Custom PRD**:
+```
+"Create a PRD for my [consulting/portfolio/resume/initiative] landing page
+targeting [audience] who need [what they need].
+My goal is [primary goal] and success means [success metric]."
+```
+
+### Step 3: Customize Content Using Templates
+
+Each content template provides:
+
+| Component | What's Included |
+|-----------|-----------------|
+| **Section-by-section content** | Exactly what text to include |
+| **Examples** | Real-world examples you can adapt |
+| **Agentic prompts** | Copy-paste prompts to customize each section |
+| **Best practices** | Tips for effective content |
+
+### Step 4: Build and Deploy
+
+| Phase | Documentation | Key Actions |
+|-------|---------------|-------------|
+| **Local Development** | [Quick Start](#quick-start-5-minutes) | Fork, install, customize |
+| **Docker Testing** | [DEPLOYMENT-ROADMAP.md](docs/DEPLOYMENT-ROADMAP.md#phase-2-docker-containerization-day-1-2) | Build image, test container |
+| **AWS Deployment** | [DEPLOYMENT-ROADMAP.md](docs/DEPLOYMENT-ROADMAP.md#phase-5-deploy-to-app-runner-day-2-3) | Push to ECR, deploy to App Runner |
+
+### Documentation Map
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    PLANNING PHASE                                │
+│                                                                  │
+│  ┌──────────────────┐     ┌──────────────────┐                 │
+│  │  PRD-TEMPLATES   │────▶│ Choose your PRD  │                 │
+│  │  (docs/)         │     │ template (1-4)   │                 │
+│  └──────────────────┘     └──────────────────┘                 │
+│           │                        │                            │
+│           ▼                        ▼                            │
+│  ┌──────────────────┐     ┌──────────────────┐                 │
+│  │  TECH-STACK.md   │     │ Understand user  │                 │
+│  │  (Skills/Agents) │     │ stories & metrics│                 │
+│  └──────────────────┘     └──────────────────┘                 │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                   CUSTOMIZATION PHASE                            │
+│                                                                  │
+│  ┌──────────────────┐     ┌──────────────────┐                 │
+│  │ CONTENT-TEMPLATES│────▶│ Copy prompts for │                 │
+│  │  (docs/)         │     │ each section     │                 │
+│  └──────────────────┘     └──────────────────┘                 │
+│           │                        │                            │
+│           ▼                        ▼                            │
+│  ┌──────────────────┐     ┌──────────────────┐                 │
+│  │  GEMINI.md or    │     │ Run prompts with │                 │
+│  │  CLAUDE.md       │     │ AI assistant     │                 │
+│  └──────────────────┘     └──────────────────┘                 │
+└─────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
+│                    DEPLOYMENT PHASE                              │
+│                                                                  │
+│  ┌──────────────────┐     ┌──────────────────┐                 │
+│  │ DEPLOYMENT-      │────▶│ Follow step-by-  │                 │
+│  │ ROADMAP.md       │     │ step guide       │                 │
+│  └──────────────────┘     └──────────────────┘                 │
+│           │                        │                            │
+│           ▼                        ▼                            │
+│  ┌──────────────────┐     ┌──────────────────┐                 │
+│  │ Docker + AWS     │     │ Live site on     │                 │
+│  │ commands         │     │ App Runner       │                 │
+│  └──────────────────┘     └──────────────────┘                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Quick Reference: Which Doc When?
+
+| When you need to... | Use this document |
+|---------------------|-------------------|
+| Understand requirements for your use case | `docs/PRD-TEMPLATES.md` |
+| Get copy-paste content and prompts | `docs/CONTENT-TEMPLATES.md` |
+| Learn the tech stack and AI agents | `docs/TECH-STACK.md` |
+| Deploy to AWS step-by-step | `docs/DEPLOYMENT-ROADMAP.md` |
+| Understand the overall project | `docs/PRD.md` |
+| Configure Gemini CLI | `GEMINI.md` |
+| Configure Claude Code | `CLAUDE.md` |
+
+---
+
 ## Deployment Roadmap
 
 ### Phase 1: Local Development (Day 1)
