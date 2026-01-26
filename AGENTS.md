@@ -183,8 +183,105 @@ Quick summary:
 | `app/layout.tsx` | Site metadata, fonts | Changing title, description |
 | `app/globals.css` | Global styles | Advanced styling |
 | `components/` | Reusable UI components | Adding new features |
+| `.skills/` | Agent skills (prompting patterns) | Learning advanced techniques |
 | `docker-compose.yml` | Container configuration | Rarely |
 | `Dockerfile` | Production build config | Rarely |
+
+---
+
+## Agent Skills
+
+The `.skills/` folder contains **agent-agnostic prompting patterns** that work with any CLI coding agent (Claude Code, Gemini CLI, Codex CLI). These skills teach you how to orchestrate AI effectively.
+
+### Available Skills
+
+| Skill | When to Use | Key Concept |
+|-------|-------------|-------------|
+| **aws-cli-architect** | Provisioning cloud infrastructure | "Infrastructure is code. CLI commands are atoms." |
+| **pm-design-thinking** | Defining features, prioritizing work | "Users don't want features. They want outcomes." |
+| **multi-file-architecture** | Changes spanning multiple files | "Describe outcomes, not steps." |
+| **test-driven-scaffolding** | Building new features, refactoring | "Tests are specifications in executable form." |
+| **context-aware-debugging** | Fixing bugs, troubleshooting | "Errors are symptoms. Context reveals causes." |
+
+### How to Use Skills
+
+**Option 1: Reference in prompts**
+```
+"Using the test-driven-scaffolding approach, add user authentication.
+Write the tests first, show me for approval, then implement."
+```
+
+**Option 2: Read skill file first**
+```
+"Read .skills/aws-cli-architect/SKILL.md, then help me provision
+a production-ready ECS Fargate service following those patterns."
+```
+
+**Option 3: Ask agent to apply skill**
+```
+"Apply pm-design-thinking principles to this feature request:
+'Add a dashboard'. What should I actually build?"
+```
+
+### Skill Deep Dives
+
+#### aws-cli-architect
+Orchestrate AWS infrastructure through CLI with cloud architect expertise—cost-aware, security-first, and production-ready patterns.
+
+**Power Move**:
+> "Before provisioning, show me: estimated monthly cost, security group rules, IAM permissions required, and what breaks if any single AZ goes down."
+
+#### pm-design-thinking
+Frame development through user outcomes and design thinking. Translate stakeholder needs into buildable specifications.
+
+**Power Move**:
+> "Before building, generate 3 different approaches to solving [user problem]. For each: the assumption it tests, simplest implementation, and how we'd know it worked."
+
+#### multi-file-architecture
+Coordinate changes across frontend, backend, database, and config in single operations.
+
+**Power Move**:
+> "Add user management: database table, API endpoints for CRUD, and dashboard component with edit/delete—all coherent, all at once."
+
+#### test-driven-scaffolding
+Invert the workflow: tests first, then implementation to pass them.
+
+**Power Move**:
+> "Write the tests, show me for approval, THEN implement. I want to validate the spec before you write production code."
+
+#### context-aware-debugging
+Accelerate debugging by providing diagnostic context that enables agent reasoning.
+
+**Power Move**:
+> "Explain three different hypotheses for why this could fail, then tell me what evidence would confirm or eliminate each."
+
+### Creating Your Own Skills
+
+Skills follow a simple structure:
+```
+.skills/
+└── your-skill-name/
+    └── SKILL.md
+```
+
+SKILL.md format:
+```markdown
+---
+name: your-skill-name
+description: When to use this skill and what it does
+---
+
+# Skill Title
+
+## Core Principle
+One sentence capturing the essence.
+
+## Patterns
+Examples of how to apply the skill.
+
+## Power Move
+The advanced technique that unlocks the skill's full potential.
+```
 
 ---
 

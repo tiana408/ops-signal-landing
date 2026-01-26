@@ -151,6 +151,26 @@ This template teaches the real-world workflow:
 - **Semantic HTML** - Proper use of `<main>`, `<nav>`, `<section>`, `<footer>`
 - **Focus Management** - Visible focus states throughout
 
+### Agent Skills (Advanced Prompting)
+
+The `.skills/` folder contains agent-agnostic prompting patterns that work with **any CLI coding agent**:
+
+| Skill | What It Teaches |
+|-------|-----------------|
+| **aws-cli-architect** | Cloud infrastructure provisioning (cost-aware, security-first) |
+| **pm-design-thinking** | Product thinking for web development |
+| **multi-file-architecture** | Coordinated changes across entire codebases |
+| **test-driven-scaffolding** | Write tests first, then implement |
+| **context-aware-debugging** | Effective debugging with AI assistance |
+
+**Usage example**:
+```
+"Using the test-driven-scaffolding approach from .skills/,
+add form validation. Write tests first, show me, then implement."
+```
+
+See `AGENTS.md` for detailed skill documentation.
+
 ---
 
 ## Project Structure
@@ -173,6 +193,12 @@ agentic-landing-template/
 │   ├── portfolio.tsx       # Designer/developer portfolio template
 │   ├── resume.tsx          # Digital resume/CV template
 │   └── enterprise.tsx      # Enterprise initiative template
+├── .skills/                # Agent-agnostic prompting patterns
+│   ├── aws-cli-architect/      # Cloud infrastructure skills
+│   ├── pm-design-thinking/     # Product management lens
+│   ├── multi-file-architecture/# Coordinated multi-file changes
+│   ├── test-driven-scaffolding/# TDD patterns
+│   └── context-aware-debugging/# Debugging techniques
 ├── GEMINI.md               # System prompt for Gemini CLI
 ├── CLAUDE.md               # System prompt for Claude Code
 ├── AGENTS.md               # Shared agent instructions
