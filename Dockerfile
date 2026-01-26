@@ -2,20 +2,17 @@
 # Multi-stage build for Next.js with standalone output
 # Optimized for AWS App Runner deployment
 
-# Stage 1: Install dependencies
-FROM node:20-alpine AS deps
-WORKDIR /app
-
-# Install dependencies based on the preferred package manager
-COPY package.json package-lock.json* ./
-RUN npm ci --only=production
-
-# Stage 2: Build the application
+# Stage 1: Build the application
 FROM node:20-alpine AS builder
 WORKDIR /app
 
-# Copy dependencies from deps stage
-COPY --from=deps /app/node_modules ./node_modules
+# Copy package files first for better layer caching
+COPY package.json package-lock.json* ./
+
+# Install all dependencies (including devDependencies for build)
+RUN npm ci
+
+# Copy source files after dependencies are installed
 COPY . .
 
 # Disable Next.js telemetry during build
@@ -24,17 +21,22 @@ ENV NEXT_TELEMETRY_DISABLED=1
 # Build the application
 RUN npm run build
 
-# Stage 3: Production image
+# Stage 2: Production image
 FROM node:20-alpine AS runner
 WORKDIR /app
+
+# Image metadata
+LABEL org.opencontainers.image.title="Agentic Landing Template"
+LABEL org.opencontainers.image.description="Next.js landing page template for AI-assisted development"
+LABEL org.opencontainers.image.version="1.0.0"
 
 # Set production environment
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 
 # Create non-root user for security
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
 
 # Copy public assets
 COPY --from=builder /app/public ./public

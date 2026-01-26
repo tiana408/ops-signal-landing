@@ -14,7 +14,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    user: root
     volumes:
       - .:/workspace:cached
       - node_modules:/workspace/node_modules

@@ -43,11 +43,12 @@ This template also works for internal corporate communications:
 
 ## Quick Start
 
+After your start (either claude, codex or gemini):
 ```
 "Clone the agentic-landing-template repository from https://github.com/pingwu/agentic-landing-template and start the development container"
 ```
 
-Or manually:
+Or manually from Shell (terminal):
 ```bash
 git clone https://github.com/YOUR-USERNAME/agentic-landing-template.git
 cd agentic-landing-template
@@ -59,15 +60,15 @@ That's it! The container includes Node.js, TypeScript, and all dependencies. Hot
 
 ### Development Commands
 
-| Natural Language (say this to your AI agent) | CLI Command |
-|---------------------------------------------|-------------|
-| "Start the development container with hot-reload" | `npm run docker:dev` |
-| "Build and run the production container" | `npm run docker:prod` |
-| "Stop all running containers" | `npm run docker:down` |
-| "Show me the container logs" | `npm run docker:logs` |
-| "What's the status of my containers?" | `npm run docker:status` |
-| "Open a shell in the dev container" | `npm run docker:shell` |
-| "Clean up all containers and volumes" | `npm run docker:clean` |
+| Natural Language (say this to your AI agent)      | CLI Command             |
+| ------------------------------------------------- | ----------------------- |
+| "Start the development container with hot-reload" | `npm run docker:dev`    |
+| "Build and run the production container"          | `npm run docker:prod`   |
+| "Stop all running containers"                     | `npm run docker:down`   |
+| "Show me the container logs"                      | `npm run docker:logs`   |
+| "What's the status of my containers?"             | `npm run docker:status` |
+| "Open a shell in the dev container"               | `npm run docker:shell`  |
+| "Clean up all containers and volumes"             | `npm run docker:clean`  |
 
 ### Customize Your Page
 
@@ -115,11 +116,20 @@ This template teaches the real-world workflow:
 |------------|---------|---------|
 | Next.js | 16.x | React framework with App Router |
 | React | 19.x | UI component library |
-| TypeScript | 5.x | Type safety |
+| TypeScript | 5.x | Type safety (ES2022 target) |
 | Tailwind CSS | 4.x | Utility-first styling |
+| ESLint | 9.x | Code quality with flat config |
 | Docker | Latest | Containerization |
 | AWS App Runner | - | Cloud deployment |
 | AWS ECR | - | Container registry |
+
+### Accessibility Features
+
+- **Skip Link** - Keyboard users can skip navigation to main content
+- **ARIA Landmarks** - Proper labeling for screen readers (`aria-label` on nav)
+- **Mobile Navigation** - Fully accessible hamburger menu with ARIA states
+- **Semantic HTML** - Proper use of `<main>`, `<nav>`, `<section>`, `<footer>`
+- **Focus Management** - Visible focus states throughout
 
 ---
 
@@ -146,10 +156,14 @@ agentic-landing-template/
 ├── GEMINI.md               # System prompt for Gemini CLI
 ├── CLAUDE.md               # System prompt for Claude Code
 ├── AGENTS.md               # Shared agent instructions
-├── Dockerfile              # Production container configuration
-├── Dockerfile.dev          # Development container configuration
+├── components/
+│   ├── Icons.tsx           # Reusable SVG icon components
+│   └── MobileNav.tsx       # Mobile navigation menu (client component)
+├── Dockerfile              # Production container (multi-stage, optimized)
+├── Dockerfile.dev          # Development container (minimal, non-root)
 ├── docker-compose.yml      # Docker orchestration
-└── package.json            # Dependencies
+├── eslint.config.mjs       # ESLint 9 flat config
+└── package.json            # Dependencies (dev/prod separated)
 ```
 
 ---

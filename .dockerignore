@@ -41,5 +41,13 @@ __tests__
 
 # Docker files (prevent recursive copy)
 Dockerfile
+Dockerfile.dev
 docker-compose.yml
 .dockerignore
+
+# Build/cache artifacts
+coverage
+.nyc_output
+.turbo
+.cache
+*.tsbuildinfo

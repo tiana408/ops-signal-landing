@@ -4,22 +4,12 @@
 
 FROM node:20-alpine
 
-# Install essential development tools
+# Install essential development tools (minimal set)
 RUN apk add --no-cache \
     git \
     curl \
     bash \
-    openssh-client \
-    python3 \
-    make \
-    g++
-
-# Install global npm packages for development
-RUN npm install -g \
-    typescript \
-    ts-node \
-    eslint \
-    prettier
+    openssh-client
 
 # Set working directory
 WORKDIR /workspace
