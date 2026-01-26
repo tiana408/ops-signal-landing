@@ -573,6 +573,7 @@ Each content template provides:
 | Understand requirements for your use case | `docs/PRD-TEMPLATES.md` |
 | Get copy-paste content and prompts | `docs/CONTENT-TEMPLATES.md` |
 | Learn the tech stack and AI agents | `docs/TECH-STACK.md` |
+| Set up AWS from scratch | `docs/AWS-DEPLOYMENT-GUIDE.md` |
 | Deploy to AWS step-by-step | `docs/DEPLOYMENT-ROADMAP.md` |
 | Understand the overall project | `docs/PRD.md` |
 | Configure Gemini CLI | `GEMINI.md` |
@@ -645,7 +646,8 @@ These files help the AI understand your project structure and coding standards.
 - [Product Requirements](docs/PRD.md) - Main PRD for the template project
 - [PRD Templates by Use Case](docs/PRD-TEMPLATES.md) - Tailored PRDs for each landing page type
 - [Tech Stack Details](docs/TECH-STACK.md) - Technology and agent documentation
-- [Deployment Guide](docs/DEPLOYMENT-ROADMAP.md) - AWS deployment walkthrough
+- [AWS Deployment Guide](docs/AWS-DEPLOYMENT-GUIDE.md) - **Complete AWS setup from scratch** (account, IAM, deploy)
+- [Deployment Roadmap](docs/DEPLOYMENT-ROADMAP.md) - Phase-by-phase deployment walkthrough
 - [Content Templates](docs/CONTENT-TEMPLATES.md) - Ready-to-use content for all 4 templates
 
 ### Getting Help
