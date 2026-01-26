@@ -35,16 +35,16 @@ This template also works for internal corporate communications:
 |----------|---------|
 | [Docker Desktop](https://www.docker.com/products/docker-desktop/) | Container runtime for development and deployment |
 | **Any CLI Coding Agent** (choose one): | AI-assisted development |
-| - [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Google's agentic coding assistant |
-| - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Anthropic's agentic coding assistant |
+| - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | Anthropic's agentic coding assistant; available on AWS Bedrock|
 | - [Codex CLI](https://github.com/openai/codex) | OpenAI's agentic coding assistant |
+| - [Gemini CLI](https://github.com/google-gemini/gemini-cli) | Google's agentic coding assistant |
 
 ---
 
 ## Quick Start
 
 ```
-"Clone the agentic-landing-template repository and start the development container"
+"Clone the agentic-landing-template repository from https://github.com/pingwu/agentic-landing-template and start the development container"
 ```
 
 Or manually:
@@ -71,7 +71,7 @@ That's it! The container includes Node.js, TypeScript, and all dependencies. Hot
 
 ### Customize Your Page
 
-Open a new terminal and tell your AI agent what you want:
+Open a new terminal with CLI coding agent open and tell it what you want:
 
 ```
 "Update the hero section with my name 'John Smith' and tagline 'Full Stack Developer'"
@@ -634,9 +634,9 @@ Each content template provides:
 
 This project includes optimized system prompts for AI assistants:
 
+- **CLAUDE.md** - Configuration for Anthropic's Claude Code (AWS BedRock availalbe; similar token usage costs)
 - **AGENTS.md** - Shared instructions for all AI coding agents
 - **GEMINI.md** - Configuration for Google's Gemini CLI
-- **CLAUDE.md** - Configuration for Anthropic's Claude Code
 
 These files help the AI understand your project structure and coding standards.
 
@@ -669,7 +669,7 @@ MIT License - Feel free to use for personal or commercial projects.
 
 ## Credits
 
-Created for **CSTU CSE 651: Container Development to AWS Deployment**
+Created for **CSTU CSE 651: Software Developent with Agentic AI and [March 2, 2026 AWS Builder Loft Event](https://luma.com/f73qb06t) **
 
 Instructor: Ping Wu
 Course: Agentic Development with Cloud Deployment
