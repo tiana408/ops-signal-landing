@@ -36,6 +36,36 @@ Companies want to lock you into their solutions. You must use their tools. You c
 3. **Deploy to AWS** — Portable containers, exportable anytime
 4. **AI assists, you own** — The code is yours, not trapped in a builder
 
+### Natural Language Development
+
+**Forget syntax. Think like an architect.**
+
+| Old Way (Coding) | New Way (Natural Language) |
+|------------------|---------------------------|
+| Learn JavaScript, React, CSS | **Describe what you want in plain English** |
+| Debug semicolons and brackets | **AI handles the syntax** |
+| Stack Overflow for every error | **Ask the AI to fix it** |
+| Months to become productive | **Productive in hours** |
+
+**Example — instead of writing code:**
+```
+"Add a contact section with my email, a Calendly booking link,
+and social media icons for LinkedIn and GitHub"
+```
+
+**You focus on:**
+- **What** you want to build (the outcome)
+- **Why** it matters (the business logic)
+- **How it connects** (system thinking)
+
+**The AI handles:**
+- Syntax and formatting
+- Best practices and patterns
+- File organization and imports
+
+> *"The new professional superpower is not coding; it's orchestrating AI agents to build for you."*
+> — MACA Curriculum
+
 **Deploy to AWS is as easy as following this project.**
 
 ---
