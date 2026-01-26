@@ -759,6 +759,45 @@ MIT License - Feel free to use for personal or commercial projects.
 
 ---
 
+## Project History
+
+This template evolved from [**MACA (Multi-AI-Coding-Agent)**](https://github.com/pingwu/maca), a comprehensive AI-assisted development curriculum created in 2025.
+
+### The Evolution
+
+```
+MACA (Sept 2025)                    Agentic Landing Template (2026)
+────────────────                    ────────────────────────────────
+5 AI coding agents          →       3 focused agents (Claude, Gemini, Codex)
+5 portfolio projects        →       1 hands-on project
+Comprehensive curriculum    →       Accessible entry point
+Multi-domain learning       →       Cloud deployment focus
+```
+
+### Core Philosophy (Unchanged)
+
+> *"The new professional superpower is not coding; it's orchestrating AI agents to build for you."*
+> — MACA Curriculum
+
+This template carries forward MACA's core insight: **the skill that matters is expressing problems clearly so AI can help solve them**. Whether you're a developer seeking amplification or a domain expert without coding background, the approach is the same — learn to collaborate with AI.
+
+### Why a Simpler Starting Point?
+
+MACA taught us that learners need:
+1. **Quick wins** — See results in hours, not weeks
+2. **Real outcomes** — Build something they'll actually use
+3. **Transferable skills** — Patterns that apply to any project
+
+The landing page template delivers all three while opening the door to deeper learning.
+
+### The Journey Continues
+
+- **MACA** remains the comprehensive resource for those ready to go deeper
+- **This template** is the accessible on-ramp
+- **Future templates** (Chat, RAG, Multi-Agent) extend the learning path
+
+---
+
 ## Credits
 
 **Course**: CSE 651 - Software Development with Agentic AI

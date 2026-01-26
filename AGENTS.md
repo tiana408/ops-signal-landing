@@ -257,6 +257,17 @@ Your next project could be:
 - A dashboard or data visualization
 - An AI-powered application
 
+### Go Deeper with MACA
+
+This template evolved from [**MACA (Multi-AI-Coding-Agent)**](https://github.com/pingwu/maca) — a comprehensive curriculum for AI-assisted development.
+
+> *"The new professional superpower is not coding; it's orchestrating AI agents to build for you."*
+
+MACA covers:
+- 5 AI coding agents (Claude, Gemini, Cursor, Copilot, DeepAgent)
+- 5 portfolio projects across different domains
+- Advanced agent orchestration patterns
+
 ### Expanding Your Skills
 
 | If You Want To... | Explore... |
