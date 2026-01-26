@@ -2,7 +2,45 @@
 
 > **"When AI can do anything for you, what will you build?"**
 
-**Learn to build and deploy cloud solutions with AI — starting with something you'll actually use.**
+---
+
+## Sovereign AI: Own Your Digital Presence
+
+### The Problem with Platform Lock-In
+
+Companies want to lock you into their solutions. You must use their tools. You can't export your data. You can't move to another platform. You must pay forever.
+
+**"Recurring revenue"** is the business model for WordPress.com, Wix, Squarespace, Salesforce, and countless others.
+
+### Why This Matters
+
+- New platforms appear with better features
+- New solutions appear at lower prices
+- AI is changing everything — fast
+
+**But you're locked into old solutions.** Your content is trapped. Your data is hostage. Migration is painful or impossible.
+
+### The Sovereign Approach
+
+| Platform Lock-In | Sovereign Development |
+|------------------|----------------------|
+| Files stored in their cloud | **Files on YOUR computer** |
+| Proprietary formats | **Standard formats (React, HTML, CSS)** |
+| Can't leave without losing work | **Take everything with you** |
+| Pay forever or lose access | **You own it permanently** |
+
+### The Solution
+
+1. **Develop locally** — Your files, your machine, your control
+2. **Use standard technologies** — Next.js, React, Docker (no proprietary lock-in)
+3. **Deploy to AWS** — Portable containers, exportable anytime
+4. **AI assists, you own** — The code is yours, not trapped in a builder
+
+**Deploy to AWS is as easy as following this project.**
+
+---
+
+## Learn to Build and Deploy
 
 This template teaches modern cloud development through hands-on practice. You'll deploy a professional landing page while learning containers, cloud services, and AI-assisted coding — skills that transfer to any project you want to build next.
 
