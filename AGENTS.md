@@ -1,164 +1,315 @@
-# Shared Agent Instructions
+# Agentic Landing Page Template
 
-**Project**: Agentic Landing Page Template  
-**Purpose**: AI-assisted development of personal branding landing pages  
-**Approach**: Container-first development
+> **"When AI can do anything for you, what will you build?"**
+
+This template teaches you to build and deploy cloud solutions with AI assistance — starting with your professional landing page.
+
+**You'll learn**: Containers • Cloud Deployment • AI-Assisted Coding
+**You'll build**: A live site that represents your professional brand
+**You'll gain**: The confidence and skills to tackle your next, bigger idea
+
+---
+
+## Why This Exists
+
+This isn't just a landing page template — it's your first step into building cloud-native, AI-assisted solutions.
+
+### For Consultants & Professionals
+
+Expand what you can offer clients by understanding the same tools your technical teams use. After this project, you'll speak the language of modern software development.
+
+### For Students (CSE651)
+
+Learn real-world deployment workflows used by companies worldwide. This is hands-on cloud computing, not just theory.
+
+### For Builders & Founders
+
+Validate ideas quickly. The same skills that deploy this landing page can deploy your MVP, prototype, or client demo.
+
+### The Transformation
+
+| Before | After |
+|--------|-------|
+| "I need someone to build my site" | "I can build and deploy it myself" |
+| "Cloud deployment sounds complex" | "I understand containers and cloud services" |
+| "AI coding tools are mysterious" | "I collaborate with AI to write code" |
+| "What if I want to build something else?" | "I have the skills to try" |
+
+---
+
+## What You'll Learn
+
+This project is structured as a learning journey with four phases:
+
+| Phase | You'll Do | You'll Understand | Time |
+|-------|-----------|-------------------|------|
+| **1. Local Dev** | Run `npm run docker:dev` | How containers provide consistent dev environments | 10 min |
+| **2. Customize** | Use AI prompts to edit content | How to collaborate with AI coding assistants | 30 min |
+| **3. Preview Prod** | Run `npm run docker:prod` | Difference between dev and production builds | 10 min |
+| **4. Deploy** | Push to AWS App Runner | How cloud services host your applications | 20 min |
+
+**Total time to deployed site: ~1-2 hours**
+
+### Learning Checkpoints
+
+After each phase, you should be able to answer:
+
+- **Phase 1**: "What is a container and why does it help development?"
+- **Phase 2**: "How do I give AI assistants effective instructions?"
+- **Phase 3**: "Why are production builds different from development?"
+- **Phase 4**: "What happens when I deploy to the cloud?"
 
 ---
 
 ## Project Overview
 
-This is a **Next.js 16 landing page template** for personal branding sites:
+**Project**: Agentic Landing Page Template
+**Purpose**: Learn AI-assisted development by building something real
+**Approach**: Container-first development
+**Course**: CSE651 - Software Development with Agentic AI (CSTU.edu)
+
+### Use Cases
+
+The default template works for:
 - Consulting/Freelance services
 - Professional portfolio
 - Digital resume/CV
 - Enterprise initiative communications
 
-Primary goal: customize content and deploy quickly using natural language commands.
+### Tech Stack
+
+| Technology | What You'll Learn |
+|------------|-------------------|
+| **Next.js 16** | Modern React framework with App Router |
+| **React 19** | Component-based UI development |
+| **TypeScript** | Type-safe JavaScript |
+| **Tailwind CSS 4** | Utility-first styling approach |
+| **Docker** | Containerization for consistent environments |
+| **AWS App Runner** | Managed cloud deployment |
 
 ---
 
-## Tech Stack
+## Getting Started
 
-- **Next.js** 16.x (App Router)
-- **React** 19.x
-- **TypeScript** 5.x
-- **Tailwind CSS** 4.x
-- **Docker** (local dev + production preview)
-- **AWS App Runner** (deployment target)
+### Prerequisites
+
+Before you begin, ensure you have:
+- [ ] Docker Desktop installed ([download](https://www.docker.com/products/docker-desktop/))
+- [ ] An AI coding assistant (Claude Code, Gemini CLI, or Codex)
+- [ ] Basic comfort with terminal/command line
+- [ ] A text editor (VS Code recommended)
+
+### Phase 1: Local Development
+
+**Goal**: Get the site running on your machine
+
+```bash
+# Clone the repository
+git clone https://github.com/pingwu/agentic-landing-template.git
+cd agentic-landing-template
+
+# Start the development container
+npm run docker:dev
+
+# Open http://localhost:3000
+```
+
+**What just happened?** Docker created an isolated environment with Node.js and all dependencies. Your code runs the same way on any machine — this is why companies use containers.
+
+✅ **Checkpoint**: Can you see the landing page at localhost:3000?
+
+### Phase 2: Customize with AI
+
+**Goal**: Personalize the content using natural language
+
+Open your AI assistant (Claude Code, Gemini CLI, or Codex) and try these prompts:
+
+```
+"Update the hero section with my name 'Your Name' and title 'Your Title'"
+```
+
+```
+"Change the services section to list my three main offerings"
+```
+
+```
+"Update the contact section with my email and LinkedIn"
+```
+
+**What just happened?** The AI read your code, understood the structure, and made targeted edits. You collaborated with AI to write code without writing code yourself.
+
+✅ **Checkpoint**: Does the site reflect your personal brand?
+
+### Phase 3: Production Preview
+
+**Goal**: Test what will actually deploy to the cloud
+
+```bash
+# Stop development container
+npm run docker:down
+
+# Build and run production version
+npm run docker:prod
+
+# Open http://localhost:3001
+```
+
+**What just happened?** Docker built an optimized, smaller version of your site — the same thing that will run in the cloud. Production builds remove development tools and optimize for speed.
+
+✅ **Checkpoint**: Does the production build look correct?
+
+### Phase 4: Deploy to Cloud
+
+**Goal**: Make your site live on the internet
+
+See `docs/DEPLOYMENT-ROADMAP.md` for detailed AWS deployment steps.
+
+Quick summary:
+1. Push Docker image to AWS ECR (container registry)
+2. Create App Runner service (managed hosting)
+3. Get your public URL
+
+**What just happened?** AWS is now running your container 24/7. When someone visits your URL, App Runner serves your site from the cloud.
+
+✅ **Checkpoint**: Can you share your live URL with someone?
 
 ---
 
 ## Key Files
 
-- `app/page.tsx` - Main landing page (primary edit target)
-- `app/layout.tsx` - Root layout, metadata
-- `app/globals.css` - Global styles, Tailwind imports
-- `templates/` - Alternative page templates
-- `docker-compose.yml` - Container orchestration
-- `Dockerfile` - Production multi-stage build
-- `Dockerfile.dev` - Development container
+| File | Purpose | When to Edit |
+|------|---------|--------------|
+| `app/page.tsx` | Main landing page content | Customizing your content |
+| `app/layout.tsx` | Site metadata, fonts | Changing title, description |
+| `app/globals.css` | Global styles | Advanced styling |
+| `components/` | Reusable UI components | Adding new features |
+| `docker-compose.yml` | Container configuration | Rarely |
+| `Dockerfile` | Production build config | Rarely |
 
 ---
 
-## Container-First Workflow
+## Container Commands Reference
 
-All container commands must run in **detached mode**:
+All container commands use **detached mode** (run in background):
 
-```bash
-# Start development (detached)
-npm run docker:dev
-
-# Check status
-npm run docker:status
-
-# View logs
-npm run docker:logs
-
-# Stop containers
-npm run docker:down
-
-# Test production build locally
-npm run docker:prod
-```
+| Command | Purpose |
+|---------|---------|
+| `npm run docker:dev` | Start development with hot-reload |
+| `npm run docker:prod` | Test production build locally |
+| `npm run docker:down` | Stop all containers |
+| `npm run docker:status` | Check container status |
+| `npm run docker:logs` | View container logs |
+| `npm run docker:shell` | Open terminal in container |
+| `npm run docker:clean` | Remove containers and volumes |
 
 ---
 
 ## Coding Standards
 
 ### TypeScript
-- Use explicit types
-- Avoid `any`
+- Use explicit types (avoid `any`)
+- The AI assistant will help with type errors
 
 ### React/Next.js
-- Server Components by default
+- Server Components by default (no `'use client'`)
 - Add `'use client'` only when needed (hooks, interactivity)
 - Preserve accessibility attributes
 
 ### Tailwind CSS 4
-Use Tailwind v4 syntax:
-```css
-@import "tailwindcss";
-```
-Avoid v3 directives like `@tailwind base/components/utilities`.
+- Use utility classes in JSX
+- Maintain dark mode compatibility (`dark:` variants)
 
 ---
 
-## Content Structure (Default Template)
+## Troubleshooting
 
-1. Navigation
-2. Hero
-3. Authority/About
-4. Services
-5. Case Studies/Work
-6. FAQ
-7. Contact
-8. Footer
+### Docker won't start
+- Ensure Docker Desktop is running
+- Try: `npm run docker:clean` then `npm run docker:dev`
 
----
+### Build fails
+- Check terminal for specific error message
+- Ask your AI assistant: "The build is failing with this error: [paste error]"
 
-## Common Tasks
+### Site looks broken
+- Check browser console for errors
+- Ensure you saved all files
+- Try: `npm run docker:down && npm run docker:dev`
 
-### Update Content
-1. Read `app/page.tsx`
-2. Make targeted edits
-3. Preserve structure and responsiveness
-
-### Change Styles
-1. Prefer Tailwind utility classes
-2. Update `globals.css` only for global changes
-3. Maintain light/dark mode compatibility
-
-### Switch Templates
-```bash
-cp templates/services.tsx app/page.tsx
-cp templates/portfolio.tsx app/page.tsx
-cp templates/resume.tsx app/page.tsx
-cp templates/enterprise.tsx app/page.tsx
-```
+### AI changes broke something
+- Use git to revert: `git checkout app/page.tsx`
+- Start fresh: `git stash` to save changes, undo, try again
 
 ---
 
-## Docker (Direct)
+## Where to Go Next
 
-```bash
-# Development
-docker compose --profile dev up -d --build
+This template is your starting point. The skills you've learned transfer to any project.
 
-# Production preview
-docker compose --profile prod up -d --build
-```
+### What Past Users Have Built
+
+> **Mark** started with this template, learned the fundamentals, and was inspired to build a **stock trading signal application** with backtesting. He deployed it to Vercel and is now exploring how to scale and market it.
+
+Your next project could be:
+- A client proposal or demo site
+- An internal tool for your business
+- A prototype to validate a new idea
+- A dashboard or data visualization
+- An AI-powered application
+
+### Expanding Your Skills
+
+| If You Want To... | Explore... |
+|-------------------|------------|
+| Add a database | Supabase, PlanetScale, or AWS RDS |
+| Add authentication | NextAuth.js, Clerk, or Auth0 |
+| Build an API | Next.js API routes or AWS Lambda |
+| Add AI features | OpenAI API, Anthropic API, or AWS Bedrock |
+| Deploy elsewhere | Vercel, Netlify, or AWS Amplify |
+
+### The Question Remains
+
+> **"When AI can do anything for you, what will you build?"**
+
+You now have the foundation. The tools. The experience. What matters most to you?
 
 ---
 
-## AWS Deployment (Summary)
-
-```bash
-# Build image
-docker build -t landing-page:latest .
-
-# Push to ECR, then deploy to App Runner
-# (See docs/DEPLOYMENT-ROADMAP.md for full steps)
-```
-
----
-
-## Constraints
+## Constraints (What Not To Do)
 
 ### Do Not
-- Run blocking container commands (missing `-d`)
-- Remove accessibility attributes
-- Change core dependencies without explanation
-- Use deprecated Tailwind/React patterns
+- Run blocking container commands (always use `-d` flag or npm scripts)
+- Remove accessibility attributes from HTML
+- Delete TypeScript types without replacement
+- Use deprecated Tailwind v3 patterns
 
 ### Always
 - Use detached mode for container startup
-- Keep TypeScript valid
+- Keep TypeScript valid (ask AI to fix errors)
 - Preserve mobile responsiveness
+- Test changes before committing
 
+---
+
+## About This Project
+
+**Course**: CSE651 - Software Development with Agentic AI
+**Institution**: CSTU.edu
+**Instructor**: Ping Wu
+**Demo**: AWS Builder Loft, San Francisco (March 2, 2026)
+
+### Contributing
+
+Found an issue? Have a suggestion?
+- Open a GitHub issue
+- Submit a pull request
+- Share your success story
+
+---
 
 ## Files That Delegate Here
 
-- `CLAUDE.md`
-- `GEMINI.md`
-- `AGENT.md`
+These files point to this shared instruction set:
+- `CLAUDE.md` — For Anthropic's Claude Code
+- `GEMINI.md` — For Google's Gemini CLI
+- `AGENT.md` — For other AI coding assistants

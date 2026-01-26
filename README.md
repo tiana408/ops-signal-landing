@@ -1,8 +1,34 @@
 # Agentic Landing Page Template
 
-**Build and deploy your professional landing page using AI-assisted development**
+> **"When AI can do anything for you, what will you build?"**
 
-A complete template for creating personal branding landing pages (services, portfolio, resume) using Agentic Coding tools like **Gemini CLI**, **Claude Code**, or **Codex**. Deploy to AWS in minutes with natural language commands.
+**Learn to build and deploy cloud solutions with AI — starting with something you'll actually use.**
+
+This template teaches modern cloud development through hands-on practice. You'll deploy a professional landing page while learning containers, cloud services, and AI-assisted coding — skills that transfer to any project you want to build next.
+
+**Course**: CSE651 - Software Development with Agentic AI ([CSTU.edu](https://cstu.edu))
+**Demo**: AWS Builder Loft, San Francisco (March 2, 2026)
+
+---
+
+## What You'll Learn
+
+| Phase | You'll Do | You'll Understand |
+|-------|-----------|-------------------|
+| **1. Local Dev** | Run containers locally | How Docker provides consistent environments |
+| **2. Customize** | Edit with AI prompts | How to collaborate with AI coding assistants |
+| **3. Preview** | Test production build | Why dev and prod builds differ |
+| **4. Deploy** | Push to AWS | How cloud services host applications |
+
+**Time to deployed site: ~1-2 hours**
+
+### The Transformation
+
+| Before | After |
+|--------|-------|
+| "I need someone to build my site" | "I can build and deploy it myself" |
+| "Cloud deployment sounds complex" | "I understand containers and cloud" |
+| "AI coding tools are mysterious" | "I collaborate with AI to write code" |
 
 ---
 
@@ -14,18 +40,12 @@ A modern, responsive landing page that can serve as:
 - **Digital Resume/CV**
 - **Freelance Business** site
 - **Personal Brand** presence
-- **Enterprise Initiative** communication site
 
-### Enterprise Use Cases
-This template also works for internal corporate communications:
-- **Digital Transformation Programs** - Communicate vision, roadmap, and benefits
-- **Change Management Initiatives** - Align teams around organizational changes
-- **Strategic Projects** - Share business context and progress with stakeholders
-- **Innovation Programs** - Build excitement and drive adoption
-- **IT Modernization** - Explain cloud migrations, system upgrades
-- **Employee Programs** - DEI, wellness, sustainability initiatives
+### Success Story
 
-**Live Demo**: [Your deployed URL here]
+> **Mark** started with this template, learned the fundamentals, and was inspired to build a **stock trading signal application** with backtesting. He deployed it to Vercel and is now exploring how to scale and market it.
+
+See more in [docs/SUCCESS-STORIES.md](docs/SUCCESS-STORIES.md)
 
 ---
 
@@ -659,19 +679,77 @@ These files help the AI understand your project structure and coding standards.
 ## Support
 
 ### Documentation
+- [**Success Stories**](docs/SUCCESS-STORIES.md) - What learners have built after this template
 - [Product Requirements](docs/PRD.md) - Main PRD for the template project
 - [PRD Templates by Use Case](docs/PRD-TEMPLATES.md) - Tailored PRDs for each landing page type
 - [Tech Stack Details](docs/TECH-STACK.md) - Technology and agent documentation
-- [AWS Deployment Guide](docs/AWS-DEPLOYMENT-GUIDE.md) - **Complete AWS setup from scratch** (account, IAM, deploy)
-- [AWS Glossary](docs/AWS-GLOSSARY.md) - Learn AWS services (EC2, S3, ECR, App Runner, etc.)
-- [AWS Pricing Guide](docs/AWS-PRICING-GUIDE.md) - Understand costs, free tier, billing alerts
-- [Deployment Roadmap](docs/DEPLOYMENT-ROADMAP.md) - Phase-by-phase deployment walkthrough
-- [Content Templates](docs/CONTENT-TEMPLATES.md) - Ready-to-use content for all 4 templates
+- [AWS Deployment Guide](docs/AWS-DEPLOYMENT-GUIDE.md) - Complete AWS setup from scratch
+- [AWS Glossary](docs/AWS-GLOSSARY.md) - Learn AWS services (ECR, App Runner, etc.)
+- [AWS Pricing Guide](docs/AWS-PRICING-GUIDE.md) - Understand costs and free tier
+- [Deployment Roadmap](docs/DEPLOYMENT-ROADMAP.md) - Phase-by-phase deployment guide
+- [Content Templates](docs/CONTENT-TEMPLATES.md) - Ready-to-use content examples
 
 ### Getting Help
 - Open an issue on GitHub
 - Check the FAQ in documentation
 - Tell your AI agent: "The build is failing with this error: [paste error]"
+
+---
+
+## Part of the AI Engineering Template Series
+
+This landing page template is the **starting point** in a series of hands-on AI engineering templates. Master the fundamentals here, then level up:
+
+### The Learning Path
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  FOUNDATION (You Are Here)                                      │
+│  Agentic Landing Template                                       │
+│  Learn: Containers, Cloud Deploy, AI-Assisted Coding            │
+└─────────────────────────────────┬───────────────────────────────┘
+                                  │
+         ┌────────────────────────┼────────────────────────┐
+         ▼                        ▼                        ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│ AI Chat App     │    │ RAG Application │    │ Multi-Agent     │
+│ Template        │    │ Template        │    │ Workflow        │
+│                 │    │                 │    │ Template        │
+│ Learn:          │    │ Learn:          │    │ Learn:          │
+│ - LLM APIs      │    │ - Vector DBs    │    │ - Agent Orchestr│
+│ - Streaming     │    │ - Embeddings    │    │ - Tool Use      │
+│ - Chat UI       │    │ - Retrieval     │    │ - Planning      │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+### Upcoming Templates (Coming Soon)
+
+| Template | What You'll Build | Key Technologies |
+|----------|-------------------|------------------|
+| **AI Chat Application** | Conversational interface with streaming | OpenAI/Anthropic APIs, WebSockets |
+| **RAG Knowledge Base** | Search your own documents | Vector databases, embeddings |
+| **Multi-Agent Workflow** | Autonomous task completion | Agent frameworks, tool use |
+| **AI-Powered API** | Backend with AI capabilities | AWS Bedrock, Lambda |
+
+**Star this repo** to be notified when new templates are released!
+
+---
+
+## Contributing
+
+We welcome contributions! Here's how:
+
+### Share Your Story
+Built something after learning from this template? Add it to [docs/SUCCESS-STORIES.md](docs/SUCCESS-STORIES.md)
+
+### Report Issues
+Found a bug or have a suggestion? [Open an issue](https://github.com/pingwu/agentic-landing-template/issues)
+
+### Improve Documentation
+Submit a PR with clearer explanations or additional examples
+
+### Suggest Templates
+What would you like to learn next? Let us know in the issues!
 
 ---
 
@@ -683,11 +761,26 @@ MIT License - Feel free to use for personal or commercial projects.
 
 ## Credits
 
-Created for **CSTU CSE 651: Software Developent with Agentic AI and [March 2, 2026 AWS Builder Loft Event](https://luma.com/f73qb06t) **
+**Course**: CSE 651 - Software Development with Agentic AI
+**Institution**: [CSTU.edu](https://cstu.edu)
+**Instructor**: Ping Wu
+**Demo Event**: [AWS Builder Loft, San Francisco - March 2, 2026](https://luma.com/f73qb06t)
 
-Instructor: Ping Wu
-Course: Agentic Development with Cloud Deployment
+### Acknowledgments
+- AWS for cloud infrastructure and Builder Loft event
+- Anthropic, Google, and OpenAI for AI coding assistants
+- The open source community for the amazing tools
 
 ---
 
-**Ready to build your landing page?** Start with the [Quick Start](#quick-start) above!
+## The Question
+
+> **"When AI can do anything for you, what will you build?"**
+
+This template gives you the foundation. The skills. The confidence.
+
+**Your answer is next.**
+
+---
+
+**Ready to start?** Jump to [Quick Start](#quick-start) above!
