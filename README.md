@@ -138,7 +138,7 @@ After your start (either claude, codex or gemini):
 
 Or manually from Shell (terminal):
 ```bash
-git clone https://github.com/YOUR-USERNAME/agentic-landing-template.git
+git clone https://github.com/pingwu/agentic-landing-template.git
 cd agentic-landing-template
 npm run docker:dev
 # Open http://localhost:3000
