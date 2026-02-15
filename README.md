@@ -16,14 +16,14 @@ npm install
 # manual edits to app/page.tsx for content + styling tweaks
 npm run dev -- --hostname 0.0.0.0   # previewed at http://localhost:3001
 npm run build                       # generated static site in out/
-zip -r ../tiana-le-landing-build.zip out
+zip -r ../ops-signal-landing-build.zip out
 ```
 
 No Docker, no CLI coding agents—just local npm commands and manual edits.
 
 ## Preview Locally
 ```bash
-unzip tiana-le-landing-build.zip
+unzip ops-signal-landing-build.zip
 npx serve out
 ```
 Then open the reported localhost URL (e.g., http://localhost:3000).
