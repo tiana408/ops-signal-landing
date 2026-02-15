@@ -21,6 +21,16 @@ zip -r ../ops-signal-landing-build.zip out
 
 No Docker, no CLI coding agents—just local npm commands and manual edits.
 
+## Live Demo
+Hosted on GitHub Pages: https://tiana408.github.io/ops-signal-landing/
+
+To rebuild the GitHub Pages version (adds the correct base path + asset prefix), run:
+
+```bash
+GITHUB_PAGES=true npm run build
+```
+and push the contents of `out/` to the `gh-pages` branch.
+
 ## Preview Locally
 ```bash
 unzip ops-signal-landing-build.zip
