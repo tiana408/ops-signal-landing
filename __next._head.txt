@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/ops-signal-landing/_next/static/chunks/2f236954d6a65e12.js"],"ViewportBoundary"]
+3:I[97367,["/ops-signal-landing/_next/static/chunks/2f236954d6a65e12.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"Joij5lWyj4kH2FLKeSvrR","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Your Name - Your Professional Title | Your Services"}],["$","meta","1",{"name":"description","content":"Your value proposition in 150-160 characters. What do you do and who do you help?"}],["$","meta","2",{"name":"keywords","content":"Keyword 1,Keyword 2,Keyword 3,Keyword 4"}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
