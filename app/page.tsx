@@ -506,6 +506,14 @@ export default function Home() {
                   <GitHubIcon />
                 </a>
                 <a
+                  href="https://x.com/agarthaishome"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
+                >
+                  <XTwitterIcon />
+                </a>
+                <a
                   href="mailto:tianale9@gmail.com"
                   className="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                 >

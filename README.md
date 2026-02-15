@@ -35,3 +35,4 @@ Upload the contents of `out/` to any static host (GitHub Pages, Netlify, Vercel 
 - Email: tianale9@gmail.com
 - LinkedIn: https://www.linkedin.com/in/tiana-le/
 - GitHub: https://github.com/tiana408
+- X (Twitter): https://x.com/agarthaishome
