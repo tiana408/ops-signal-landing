@@ -1,11 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable standalone output for Docker/App Runner deployment
-  output: "standalone",
+  // Export as a fully static site so you can host it anywhere
+  output: "export",
 
-  // Disable image optimization for App Runner compatibility
-  // (App Runner doesn't support Next.js image optimization service)
   images: {
     unoptimized: true,
   },
