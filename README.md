@@ -1,4 +1,4 @@
-# Tiana Le – Landing Page
+# Ops Signal Landing Page
 
 Customized from pingwu/agentic-landing-template to showcase my work as an analyst and CX strategist.
 
@@ -32,7 +32,5 @@ Then open the reported localhost URL (e.g., http://localhost:3000).
 Upload the contents of `out/` to any static host (GitHub Pages, Netlify, Vercel static, etc.).
 
 ## Contact
-- Email: tianale9@gmail.com
 - LinkedIn: https://www.linkedin.com/in/tiana-le/
 - GitHub: https://github.com/tiana408
-- X (Twitter): https://x.com/agarthaishome
