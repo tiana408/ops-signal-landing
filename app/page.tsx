@@ -87,23 +87,19 @@ export default function Home() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-600"></span>
                 </span>
-                Available for strategic CX + ops projects
+                Open for AI tutor + cultural intelligence roles
               </div>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-display tracking-tight text-slate-900 dark:text-white mb-6">
-                Hi, I&apos;m
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-500">
-                  {" "}
-                  Tiana Le
-                </span>
+                AI Tutor for Viral Culture & Search Integrity
               </h1>
 
               <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-4 font-medium">
-                Analyst & CX Strategist for complex customer-facing teams
+                I&apos;m Tiana Le—an X power user, meme translator, and search evaluator who keeps AI systems aligned with real-world culture.
               </p>
 
               <p className="text-lg text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-                I translate messy operational data into clear action for higher ed programs, enterprise product orgs, and large service teams—combining budget stewardship, escalation management, and systems know-how.
+                I audit search pages, surface model failure modes, and decode internet subcultures so engineers can ship better ranking logic, safer recommendations, and funnier chatbots. 9+ years at Google, SJSU, and freelance AI labs taught me how to turn chaos into diagnostics that leadership actually uses.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -111,14 +107,14 @@ export default function Home() {
                   href="#contact"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-purple-600 hover:bg-purple-700 rounded-xl transition-all shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40"
                 >
-                  Book a working session
+                  Request cultural eval support
                   <ArrowRightIcon className="w-5 h-5 ml-2" />
                 </a>
                 <a
                   href="#work"
                   className="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-xl transition-all"
                 >
-                  See recent work
+                  See diagnostic playbook
                 </a>
               </div>
             </div>
@@ -130,65 +126,65 @@ export default function Home() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-4">
-                  What I Bring
+                  Signals That Matter
                 </h2>
-                <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                  Hybrid operator who can parachute into academic programs, public agencies, or Big Tech to stabilize systems, keep stakeholders informed, and surface the insights leaders need.
+                <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                  Search quality teams, xAI, and cultural research labs hire me when they need a human who speaks product, statistics, and internet subcultures at the same time.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
                 <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                  <div className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">9+</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Years improving CX & ops</div>
+                  <div className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">9 yrs</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">Human evaluation & ops rigor</div>
                 </div>
                 <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                  <div className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">300+</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Executive escalations resolved</div>
+                  <div className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">328+</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">Google bugs + escalations closed</div>
                 </div>
                 <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                  <div className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">$5M+</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Academic budget stewardship</div>
+                  <div className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">98%+</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">Inter-rater reliability on audits</div>
                 </div>
                 <div className="text-center p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
-                  <div className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">4</div>
-                  <div className="text-sm text-slate-600 dark:text-slate-400">Industries navigated</div>
+                  <div className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">24/7</div>
+                  <div className="text-sm text-slate-600 dark:text-slate-400">X trend monitoring & meme tracking</div>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
                   <div className="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-900/40 flex items-center justify-center text-purple-600 dark:text-purple-300 flex-shrink-0">
-                    <BeakerIcon />
+                    <SparklesIcon />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Education</h3>
+                    <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Internet-Native Intelligence</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-400">
-                      MBA + Data Science (in progress) & BS in Computer Systems Engineering at California Science & Technology University.
+                      Daily immersion in X, Discord, and niche forums; I differentiate satire vs. sincerity, new slang vs. stale memes, and authentic virality vs. coordinated spam.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
                   <div className="w-12 h-12 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center text-indigo-600 dark:text-indigo-300 flex-shrink-0">
-                    <BriefcaseIcon />
+                    <BeakerIcon />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Experience</h3>
+                    <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Search & Model Evaluation</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-400">
-                      San Jose State University, Santa Clara Valley Transportation Authority, and five years across Google Maps, Search, and hardware support.
+                      Built taxonomies, intent rubrics, and metadata experiments for Google Maps/Search, SJSU academic systems, and freelance AI clients.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4 p-6 bg-slate-50 dark:bg-slate-800 rounded-2xl">
                   <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center text-amber-600 dark:text-amber-300 flex-shrink-0">
-                    <SparklesIcon />
+                    <BriefcaseIcon />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Recognition</h3>
+                    <h3 className="font-semibold text-slate-900 dark:text-white mb-1">Structured Reporting</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-400">
-                      Promoted into Google&apos;s Executive Escalations team in &lt;3 months; trusted to manage accreditation, budget, and international partnerships for SJSU&apos;s Ed.D. program.
+                      Executive-ready briefs with severity tiers, root-cause hypotheses, and model-level recommendations that ship without clarification.
                     </p>
                   </div>
                 </div>
@@ -202,10 +198,10 @@ export default function Home() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-4">
-                  Ways to Work Together
+                  Diagnostic Focus Areas
                 </h2>
-                <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                  Choose the engagement model that fits your team&apos;s maturity—from quick insight sprints to embedded operational leadership.
+                <p className="text-lg text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                  I operate like a lab partner for AI teams—feeding Grok, search ranking pipelines, and discovery surfaces with cultural intelligence and structured QA.
                 </p>
               </div>
 
@@ -214,113 +210,45 @@ export default function Home() {
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white mb-6">
                     <BookOpenIcon />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Ops Intel Sprint</h3>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Search + Feed Reality Checks</h3>
                   <p className="text-slate-600 dark:text-slate-400 mb-4">
-                    2-week dive into your reporting, ticketing, or enrollment data to surface the trends your leaders need now.
+                    Evaluate SERPs and feeds across relevance, freshness, authority, and intent alignment. Build taxonomies to categorize failure modes and quantify harm.
                   </p>
-                  <div className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-                    $750
-                    <span className="text-base font-normal text-slate-500"> / engagement</span>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      Data gathering + cleanup
-                    </li>
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      KPI dashboard & brief
-                    </li>
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      Executive-ready recap
-                    </li>
+                  <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                    <li className="flex items-start gap-2"><CheckIcon className="w-4 h-4 text-green-500 mt-0.5" />Query-set sampling & scoring rubrics</li>
+                    <li className="flex items-start gap-2"><CheckIcon className="w-4 h-4 text-green-500 mt-0.5" />Metadata experiments (poster identity, format, recency)</li>
+                    <li className="flex items-start gap-2"><CheckIcon className="w-4 h-4 text-green-500 mt-0.5" />Error distribution dashboards</li>
                   </ul>
-                  <a
-                    href="#contact"
-                    className="block w-full text-center py-3 px-6 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-900 dark:text-white rounded-xl font-medium transition-colors"
-                  >
-                    Book sprint
-                  </a>
                 </div>
 
-                <div className="relative group bg-white dark:bg-slate-800 rounded-2xl p-8 border-2 border-purple-500 shadow-xl shadow-purple-500/10">
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-amber-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-                    Most popular
-                  </div>
+                <div className="group bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-500 transition-all hover:shadow-xl hover:shadow-purple-500/10">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mb-6">
                     <UsersIcon />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">CX Command Center</h3>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Cultural Nuance Lab</h3>
                   <p className="text-slate-600 dark:text-slate-400 mb-4">
-                    Ongoing partner for support, academic, or civic teams that need someone to triage issues, handle escalations, and keep leadership informed.
+                    Decode memes, trolling tactics, satire, and locale-specific language evolution so AI outputs stay funny, safe, and on-brand.
                   </p>
-                  <div className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-                    $2,500
-                    <span className="text-base font-normal text-slate-500"> / month</span>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      Executive escalation ownership
-                    </li>
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      Weekly scorecards + insights
-                    </li>
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      Cross-functional coordination
-                    </li>
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      Process fixes & docs
-                    </li>
+                  <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                    <li className="flex items-start gap-2"><CheckIcon className="w-4 h-4 text-green-500 mt-0.5" />Gen-Z & Millennial tone mapping</li>
+                    <li className="flex items-start gap-2"><CheckIcon className="w-4 h-4 text-green-500 mt-0.5" />Meme lifecycle + propagation tracking</li>
+                    <li className="flex items-start gap-2"><CheckIcon className="w-4 h-4 text-green-500 mt-0.5" />Spam vs. authentic virality diagnostics</li>
                   </ul>
-                  <a
-                    href="#contact"
-                    className="block w-full text-center py-3 px-6 bg-purple-600 hover:bg-purple-700 text-white rounded-xl font-medium transition-colors"
-                  >
-                    Apply for retainer
-                  </a>
                 </div>
 
                 <div className="group bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-purple-500 dark:hover:border-purple-500 transition-all hover:shadow-xl hover:shadow-purple-500/10">
                   <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white mb-6">
                     <BoltIcon />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Embedded Ops Lead</h3>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Structured Diagnostics & Reporting</h3>
                   <p className="text-slate-600 dark:text-slate-400 mb-4">
-                    Fractional leader embedded with your team to stabilize systems, manage budgets, and stand up new processes.
+                    Deliver engineering-ready briefs: severity tiers, root-cause hypotheses, recommended mitigations, and success metrics.
                   </p>
-                  <div className="text-3xl font-bold text-slate-900 dark:text-white mb-6">
-                    Custom
-                    <span className="text-base font-normal text-slate-500"> scope-based</span>
-                  </div>
-                  <ul className="space-y-3 mb-8">
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      Budget + vendor oversight
-                    </li>
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      Systems + policy compliance
-                    </li>
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      Accreditation & reporting support
-                    </li>
-                    <li className="flex items-center text-sm text-slate-600 dark:text-slate-400">
-                      <CheckIcon className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                      International partnership liaison
-                    </li>
+                  <ul className="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                    <li className="flex items-start gap-2"><CheckIcon className="w-4 h-4 text-green-500 mt-0.5" />Failure taxonomies + tagging schema</li>
+                    <li className="flex items-start gap-2"><CheckIcon className="w-4 h-4 text-green-500 mt-0.5" />Inter-rater reliability calibration</li>
+                    <li className="flex items-start gap-2"><CheckIcon className="w-4 h-4 text-green-500 mt-0.5" />Executive + PM comms templates</li>
                   </ul>
-                  <a
-                    href="#contact"
-                    className="block w-full text-center py-3 px-6 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-900 dark:text-white rounded-xl font-medium transition-colors"
-                  >
-                    Discuss scope
-                  </a>
                 </div>
               </div>
             </div>
@@ -332,7 +260,7 @@ export default function Home() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-4">
-                  Featured Work & Wins
+                  Role-Aligned Experience
                 </h2>
                 <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
                   A sampling of the projects and outcomes I&apos;ve driven across academia, transportation, and Big Tech.
@@ -346,17 +274,17 @@ export default function Home() {
                   </div>
                   <div className="p-6">
                     <div className="text-sm text-purple-600 dark:text-purple-400 font-medium mb-2">
-                      San Jose State University · Higher Education
+                      San Jose State University · Academic Programs
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                      Ed.D Program Ops Overhaul
+                      Ed.D Intelligence & Reporting Desk
                     </h3>
                     <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
-                      Managed budgets, faculty appointments, and accreditation reporting while coordinating international field experiences.
+                      Built accreditation-ready dashboards, reconciled $5M+ budgets, and maintained documentation chains for international partnerships.
                     </p>
                     <div className="flex items-center gap-2 text-green-600 dark:text-green-400 font-semibold">
                       <TrendingUpIcon />
-                      Protected multi-million dollar budget with zero audit findings
+                      Zero audit findings while translating fiscal data into executive-friendly storyboards
                     </div>
                   </div>
                 </div>
@@ -367,17 +295,17 @@ export default function Home() {
                   </div>
                   <div className="p-6">
                     <div className="text-sm text-pink-200 dark:text-pink-300 font-medium mb-2">
-                      Google · Maps & Search
+                      Google · Search, Maps & YouTube
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                      Executive Escalation Command Desk
+                      Search & Media Quality Command Desk
                     </h3>
                     <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
-                      Resolved high-priority CEO-level complaints, triaged BBB/FCC issues, and partnered with PMs/engineers to deploy fixes.
+                      Labeled geopolitical edge cases, triaged BBB/FCC escalations, and partnered with PMs/engineers to close systemic content failures.
                     </p>
                     <div className="flex items-center gap-2 text-green-600 dark:text-green-400 font-semibold">
                       <TrendingUpIcon />
-                      Closed 328 legacy bugs & restored SLA compliance
+                      Closed 328 legacy bugs, restored SLA compliance, and improved rater calibration
                     </div>
                   </div>
                 </div>
@@ -388,17 +316,17 @@ export default function Home() {
                   </div>
                   <div className="p-6">
                     <div className="text-sm text-amber-600 dark:text-amber-400 font-medium mb-2">
-                      Santa Clara Valley Transportation Authority · Public Sector
+                      Freelance · AI Tutor & Meme Lab
                     </div>
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                      Keep SCV Beautiful Program Launch
+                      Grok-Style Meme & Trend Tutor
                     </h3>
                     <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
-                      Ran county-wide anti-litter events with Caltrans & city partners, modernized the volunteer website, and supported traffic model analysis.
+                      Curated viral meme datasets, documented trolling tactics, and iteratively refined AI-generated content for clients and robotics data collection teams.
                     </p>
                     <div className="flex items-center gap-2 text-green-600 dark:text-green-400 font-semibold">
                       <TrendingUpIcon />
-                      12 events coordinated with 5+ agencies and partners
+                      Delivered “banger” reports that separate satire, spam, and signal before data hits the model
                     </div>
                   </div>
                 </div>
@@ -412,23 +340,23 @@ export default function Home() {
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white mb-4">
-                  FAQs
+                  How I Work
                 </h2>
               </div>
 
               <div className="space-y-4">
                 <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                    What types of teams do you support?
+                    Where do you plug in fastest?
                   </h3>
                   <p className="text-slate-600 dark:text-slate-400">
-                    Higher education programs, support orgs, public agencies, and product teams that need someone who can navigate policy constraints while keeping stakeholders aligned.
+                    Search quality pods, recommender teams, academic programs, and xAI initiatives that need structured human evals with cultural fluency.
                   </p>
                 </div>
 
                 <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                    How fast can you ramp?
+                    How fast can you ramp on a new taxonomy?
                   </h3>
                   <p className="text-slate-600 dark:text-slate-400">
                     I typically ship insights within the first week. My background in executive escalations means I&apos;m comfortable diving in with incomplete context and building clarity fast.
@@ -437,19 +365,19 @@ export default function Home() {
 
                 <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                    Do you only work remotely?
+                    How do you stay current on memes & trends?
                   </h3>
                   <p className="text-slate-600 dark:text-slate-400">
-                    Mostly remote, but I can be on-site in the Bay Area for key workshops, onboarding, or executive sessions.
+                    I live on X (power user), Discords, stan Twitter, and geopolitical feeds. I catalog emerging slang, troll tactics, and virality mechanics daily so your models aren't surprised.
                   </p>
                 </div>
 
                 <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700">
                   <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
-                    Can you help with compliance-heavy work?
+                    What deliverables can we expect?
                   </h3>
                   <p className="text-slate-600 dark:text-slate-400">
-                    Yes—my roles at SJSU and Google required careful handling of FERPA, CSU policies, and regulatory complaints. I build documentation trails leaders can trust.
+                    Annotated datasets, taxonomy docs, severity scorecards, and PM-ready briefs with recommended mitigations + success metrics. Each packet is written so engineers need zero follow-up.
                   </p>
                 </div>
               </div>
@@ -466,7 +394,7 @@ export default function Home() {
                 Let&apos;s Work Together
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
-                Share what you&apos;re building, where you&apos;re stuck, and the outcomes you need. I&apos;ll reply within 1–2 business days.
+                Looking for part-time, contract, or project-based AI tutor + cultural analyst roles. Tell me what you're building and I'll reply within 1–2 business days.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
