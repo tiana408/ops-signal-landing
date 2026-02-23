@@ -99,7 +99,7 @@ export default function Home() {
               </p>
 
               <p className="text-lg text-slate-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-                I audit search pages, surface model failure modes, and decode internet subcultures so engineers can ship better ranking logic, safer recommendations, and funnier chatbots. 9+ years at Google, SJSU, and freelance AI labs taught me how to turn chaos into diagnostics that leadership actually uses.
+                I audit search pages, surface model failure modes, and decode internet subcultures so engineers can ship better ranking logic, safer recommendations, and funnier chatbots. Off-hours I&apos;m deep in geopolitics, history, and AI research threads, documenting how memes travel and what makes Grok laugh. 9+ years at Google, SJSU, and freelance AI labs taught me how to turn chaos into diagnostics that leadership actually uses.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -193,6 +193,58 @@ export default function Home() {
           </div>
         </section>
 
+        <section id="skills" className="py-20 bg-gradient-to-b from-slate-900 via-slate-950 to-black text-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <p className="text-sm uppercase tracking-[0.3em] text-purple-300 mb-3">Resume Snapshot</p>
+                <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
+                  Ops-bred analyst pivoting into AI tutor work
+                </h2>
+                <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+                  Passionate X power user and data analyst with deep interest in memes, viral trends, geopolitics, history, and current events. I&apos;m actively seeking part-time or contract AI opportunities where I can turn that obsession into better model behavior.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-12">
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+                  <h3 className="text-xl font-semibold mb-3">Skills Stack</h3>
+                  <ul className="space-y-2 text-sm text-slate-200">
+                    <li className="flex gap-2"><span className="text-purple-300">AI & ML:</span> Human evaluation, taxonomy design, AI model training data, Python/Colab workflows, QA & bug triage.</li>
+                    <li className="flex gap-2"><span className="text-purple-300">Customer & CX:</span> Executive escalations, structured annotations, policy-aligned ratings, hardware/software triage.</li>
+                    <li className="flex gap-2"><span className="text-purple-300">Data & Reporting:</span> KPI dashboards, error distribution analysis, process optimization, trend tracking.</li>
+                    <li className="flex gap-2"><span className="text-purple-300">Operational:</span> Cross-functional coordination, documentation systems, PeopleSoft/Jira/Zendesk navigation, compliance rigor.</li>
+                  </ul>
+                </div>
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur">
+                  <h3 className="text-xl font-semibold mb-3">Current Focus</h3>
+                  <p className="text-slate-200 text-sm leading-relaxed">
+                    Ed.D Program Analyst at San Jose State University (since Feb 2025). I manage a $5M+ doctorate program budget, coordinate faculty appointments, support accreditation prep, and serve as liaison for international field experiences—all while moonlighting as an AI tutor, meme analyst, and geopolitical trend tracker.
+                  </p>
+                  <p className="text-slate-200 text-sm leading-relaxed mt-4">
+                    Looking to bring that analytical discipline into AI cultural intelligence teams—especially roles touching Grok, search, or discovery systems.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-6 text-sm">
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                  <p className="text-purple-200 font-semibold mb-1">Google • 2019–2023</p>
+                  <p className="text-slate-200">Sr. Business Analyst (Maps), QA Analyst (Search/YouTube), Executive Escalations, Pixel Tier III. Designed guideline-based ratings, closed 328 bugs, escalated policy risks, and wrote reports that engineers could ship on.</p>
+                </div>
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                  <p className="text-purple-200 font-semibold mb-1">Freelance • 2022–2024</p>
+                  <p className="text-slate-200">Technical coordinator for robotics + AI content projects. Built documentation for data collection, optimized AI-generated video/speech content, and tracked deliverables across multi-client pipelines.</p>
+                </div>
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+                  <p className="text-purple-200 font-semibold mb-1">Public Sector • 2024</p>
+                  <p className="text-slate-200">Traffic Engineering Intern at Santa Clara Valley Transportation Authority—ran compliance-heavy field programs, modeled traffic flows, and coordinated multi-agency initiatives.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="services" className="py-20 bg-slate-50 dark:bg-slate-950">
           <div className="container mx-auto px-4 md:px-6">
             <div className="max-w-6xl mx-auto">
@@ -263,7 +315,7 @@ export default function Home() {
                   Role-Aligned Experience
                 </h2>
                 <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                  A sampling of the projects and outcomes I&apos;ve driven across academia, transportation, and Big Tech.
+                  Proof that I can manage doctorate programs by day and dissect meme ecosystems by night—each role sharpened the cultural intelligence I now offer AI teams.
                 </p>
               </div>
 
@@ -359,7 +411,7 @@ export default function Home() {
                     How fast can you ramp on a new taxonomy?
                   </h3>
                   <p className="text-slate-600 dark:text-slate-400">
-                    I typically ship insights within the first week. My background in executive escalations means I&apos;m comfortable diving in with incomplete context and building clarity fast.
+                    I draft taxonomy scaffolds and severity ladders within the first week. Executive escalations taught me to build hypotheses fast, then tighten precision the moment fresh data lands.
                   </p>
                 </div>
 
